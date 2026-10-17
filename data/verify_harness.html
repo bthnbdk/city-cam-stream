@@ -1,0 +1,31 @@
+<!doctype html><meta charset="utf-8">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+<video id="v" muted playsinline autoplay style="width:320px"></video>
+<script>
+window.__res = {}; window.__idx = -1;
+window.runBatch = (urls, waitMs) => new Promise(async (resolve) => {
+  for (let i = 0; i < urls.length; i++) {
+    const u = urls[i]; window.__idx = i;
+    await new Promise((done) => {
+      const v = document.getElementById('v');
+      let killed = false;
+      const finish = (ok, note) => { if (killed) return; killed = true;
+        try { h && h.destroy(); } catch(e){} v.removeAttribute('src'); v.load();
+        window.__res[u] = { ok: ok?1:0, note, ready: v.readyState, t: +v.currentTime.toFixed(2),
+                            res: (v.videoWidth||0)+'x'+(v.videoHeight||0) };
+        done(); };
+      let h = null;
+      if (window.Hls && Hls.isSupported()) {
+        h = new Hls({ manifestLoadingTimeOut: 9000, manifestLoadingMaxRetry: 0, fragLoadingMaxRetry: 1 });
+        h.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) finish(false, 'hls hata: ' + d.details); });
+        h.loadSource(u); h.attachMedia(v);
+      } else { v.src = u; v.onerror = () => finish(false, 'medya hatasi'); }
+      setTimeout(() => {
+        const ok = v.readyState >= 2 && v.currentTime > 0.4;
+        finish(ok, ok ? 'canli' : 'yuklenemedi (ready=' + v.readyState + ')');
+      }, waitMs);
+    });
+  }
+  resolve(true);
+});
+</script>

@@ -72,23 +72,21 @@ def main():
         pg.wait_for_timeout(4000)
         check("anlık kare modu <img> kullanır", pg.query_selector("#tiles img") is not None)
 
-        # 4) İstanbul (İBB HLS): oynatıcı VEYA yedek sahne — ikisi de geçerli
-        pg.goto(f"{BASE}/index.html?city=istanbul&rotation=5", wait_until="domcontentloaded")
+        # 4) Vancouver (DriveBC, doğrulanmış anlık kare kaynağı)
+        pg.goto(f"{BASE}/index.html?city=vancouver&rotation=5", wait_until="domcontentloaded")
         pg.wait_for_selector("#tiles .tile, #standby", timeout=20000)
         pg.wait_for_timeout(9000)
-        check("istanbul: medya öğesi (video/img/iframe) veya yedek sahne",
-              pg.query_selector("#tiles video, #tiles img, #tiles iframe") is not None
-              or pg.eval_on_selector("#standby", "e=>!e.hidden"),
-              pg.eval_on_selector("#ov-cam", "e=>e.textContent")[:40])
+        check("vancouver: görüntü akıyor", pg.query_selector("#tiles img, #tiles video") is not None,
+              pg.eval_on_selector("#ov-cam", "e=>e.textContent")[:44])
 
-        # 4b) YouTube embed şehri (ör. Tokyo) — iframe ile oynamalı
-        pg.goto(f"{BASE}/index.html?city=tokyo&rotation=5", wait_until="domcontentloaded")
-        pg.wait_for_selector("#tiles .tile", timeout=20000)
-        pg.wait_for_timeout(6000)
-        fr = pg.query_selector("#tiles iframe")
-        check("youtube embed iframe yüklendi", fr is not None,
-              (fr.get_attribute("src") if fr else "")[:70])
-        pg.screenshot(path=f"{OUT}/desktop_tokyo.png")
+        # 4b) Sayfada hiç iframe (YouTube) olmamalı — kullanıcı kuralı
+        check("sitede YouTube/iframe yok", pg.query_selector("#tiles iframe") is None)
+
+        # 4c) İstanbul artık doğrulanmış kaynağı olmadığı için listede olmamalı
+        idx = pg.request.get(f"{BASE}/data/cities.json").json()
+        check("İstanbul listeden çıkarıldı (çalışan kaynak yok)",
+              not any(c["city"] == "istanbul" for c in idx["cities"]),
+              ", ".join(c["city"] for c in idx["cities"][:6]))
 
         # 5) Mobil taşma
         m = br.new_context(**pw.devices["iPhone 13"]).new_page()

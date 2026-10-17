@@ -2094,7 +2094,7 @@
  },
  "vancouver": {
   "label": "Vancouver",
-  "country": "CA",
+  "country": "Canada",
   "lat": 49.283,
   "lon": -123.121,
   "tz": "America/Vancouver"
@@ -2364,5 +2364,89 @@
   "lat": -36.849,
   "lon": 174.763,
   "tz": "Pacific/Auckland"
+ },
+ "british-columbia": {
+  "label": "British Columbia",
+  "country": "Canada",
+  "lat": 53.7,
+  "lon": -124.0,
+  "tz": "America/Vancouver"
+ },
+ "victoria": {
+  "label": "Victoria",
+  "country": "Canada",
+  "lat": 48.428,
+  "lon": -123.365,
+  "tz": "America/Vancouver"
+ },
+ "kelowna": {
+  "label": "Kelowna",
+  "country": "Canada",
+  "lat": 49.888,
+  "lon": -119.496,
+  "tz": "America/Vancouver"
+ },
+ "kamloops": {
+  "label": "Kamloops",
+  "country": "Canada",
+  "lat": 50.675,
+  "lon": -120.34,
+  "tz": "America/Vancouver"
+ },
+ "prince-george": {
+  "label": "Prince George",
+  "country": "Canada",
+  "lat": 53.917,
+  "lon": -122.75,
+  "tz": "America/Vancouver"
+ },
+ "whistler": {
+  "label": "Whistler",
+  "country": "Canada",
+  "lat": 50.117,
+  "lon": -122.955,
+  "tz": "America/Vancouver"
+ },
+ "nanaimo": {
+  "label": "Nanaimo",
+  "country": "Canada",
+  "lat": 49.166,
+  "lon": -123.94,
+  "tz": "America/Vancouver"
+ },
+ "abbotsford": {
+  "label": "Abbotsford",
+  "country": "Canada",
+  "lat": 49.05,
+  "lon": -122.305,
+  "tz": "America/Vancouver"
+ },
+ "surrey": {
+  "label": "Surrey",
+  "country": "Canada",
+  "lat": 49.105,
+  "lon": -122.8,
+  "tz": "America/Vancouver"
+ },
+ "cranbrook": {
+  "label": "Cranbrook",
+  "country": "Canada",
+  "lat": 49.512,
+  "lon": -115.769,
+  "tz": "America/Vancouver"
+ },
+ "fort-st-john": {
+  "label": "Fort St. John",
+  "country": "Canada",
+  "lat": 56.252,
+  "lon": -120.846,
+  "tz": "America/Vancouver"
+ },
+ "terrace": {
+  "label": "Terrace",
+  "country": "Canada",
+  "lat": 54.518,
+  "lon": -128.6,
+  "tz": "America/Vancouver"
  }
 }

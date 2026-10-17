@@ -60,24 +60,8 @@
 
   /* ---------- medya öğesi üretimi (tek yer) ---------- */
   function mediaFor(cam) {
-    const el = document.createElement(
-      cam.kind === 'youtube' ? 'iframe' : cam.kind === 'snapshot' ? 'img' : 'video');
+    const el = document.createElement(cam.kind === 'snapshot' ? 'img' : 'video');
     let hls = null;
-    if (cam.kind === 'youtube') {
-      el.allow = 'autoplay; encrypted-media; picture-in-picture';
-      el.setAttribute('frameborder', '0'); el.setAttribute('allowfullscreen', '');
-      let src = cfg.sound ? cam.url.replace('mute=1', 'mute=0') : cam.url;
-      if (!src.includes('enablejsapi')) src += '&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
-      el.src = src;
-      // Bazı tarayıcılar embed'i duraklatılmış başlatır -> IFrame API ile oynatmayı zorla
-      el.onload = () => [700, 2000, 4000].forEach(t => setTimeout(() => {
-        try {
-          el.contentWindow.postMessage(JSON.stringify({ event: 'command', func: cfg.sound ? 'unMute' : 'mute', args: [] }), '*');
-          el.contentWindow.postMessage(JSON.stringify({ event: 'command', func: 'playVideo', args: [] }), '*');
-        } catch (e) {}
-      }, t));
-      return { el, hls };
-    }
     if (cam.kind === 'snapshot') {
       el.alt = cam.name; el.loading = 'eager'; el.decoding = 'async';
       el.src = cam.url + (cam.url.includes('?') ? '&' : '?') + 't=' + Date.now();

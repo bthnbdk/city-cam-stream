@@ -17,11 +17,14 @@ ROOT = Path(__file__).resolve().parent
 DB = ROOT / "data" / "cameras.db"
 OUT = ROOT / "site" / "data"; OUT.mkdir(parents=True, exist_ok=True)
 MAX_PER_CITY = 400
-# ÖLÇÜMLE ELENEN KAYNAKLAR (sitede yayınlanmaz):
-#   skyline_live  -> segment URL'i 'copyright_violation-*.ts' ve servis edilen kare
-#                    gerçek kamera değil, SkylineWebcams logo/uyarı kartı (17.10.2026 ölçümü,
-#                    vision doğrulaması). 853 kayıt "erişilebilir" görünse de içerik yok.
-EXCLUDED_SOURCES = {"skyline_live"}
+# ÖLÇÜMLE ELENEN KAYNAKLAR (sitede yayınlanmaz) — hepsi kare bazlı doğrulama ile:
+#   skyline_live : segment adı 'copyright_violation-*.ts'; karede gerçek görüntü değil logo kartı
+#   yt_live      : kullanıcı kararı — YouTube hiç kullanılmayacak
+#   earthcam     : 304 kameranın 291'i ffmpeg ile kare vermedi (2/100 tarayıcıda oynadı)
+EXCLUDED_SOURCES = {"skyline_live", "yt_live", "earthcam"}
+
+# Yayın kapısı: yalnızca ÖLÇÜMLE "gerçekten oynuyor" çıkan kameralar siteye girer
+# (reachable=1). Doğrulanmamış kayıtlar DB'de kalır, yayına çıkmaz.
 
 CITY_META = {
     "istanbul": dict(label="Istanbul", country="TR", tz="Europe/Istanbul", lat=41.013, lon=28.978),
@@ -61,7 +64,8 @@ def main():
                c.q_total, c.reachable, c.uptime_7d, c.uptime_samples,
                COALESCE(s.reachable, 0) AS src_reachable
         FROM cameras c LEFT JOIN sources s ON s.key = c.source_key
-        WHERE c.source_key NOT IN ('skyline_live')
+        WHERE c.source_key NOT IN ('skyline_live','yt_live','earthcam')
+          AND c.reachable = 1
           AND ((c.stream_url IS NOT NULL AND c.stream_url <> '')
                OR (c.snapshot_url IS NOT NULL AND c.snapshot_url <> ''))
         ORDER BY src_reachable DESC,
@@ -78,12 +82,7 @@ def main():
     for key, items in sorted(cities.items(), key=lambda x: -len(x[1])):
         meta = dict(CM.get(key) or CITY_META.get(
             key, dict(label=(key or "?").title(), country="", tz="UTC", lat=0, lon=0)))
-        # Ölçümle "erişilemez" çıkmış kaynaklardan gelen kameraları, çalışan kaynak
-        # varsa listenin sonuna at ve sayısını sınırla (ör. İBB HLS bu ağdan kopuk).
-        reliable = [r for r in items if r["src_reachable"]]
-        flaky = [r for r in items if not r["src_reachable"]]
-        keep = (reliable + flaky[:10]) if reliable else items
-        keep = keep[:MAX_PER_CITY]
+        keep = items[:MAX_PER_CITY]
         cam_list = [{
             "id": r["id"], "name": r["name"], "area": r["area"] or "",
             "lat": round(r["lat"], 5) if r["lat"] else None,
@@ -147,6 +146,11 @@ a.back{{color:#4cc2ff;text-decoration:none}}
 <table><tr><th>City</th><th>Country</th><th class="n">Cameras</th><th>Timezone</th><th>URL parameter</th></tr>
 {rows_html}</table></div></body></html>""", encoding="utf-8")
 
+    # artık yayında olmayan şehir dosyalarını sil (ölü kaynak kalmasın)
+    live = {f"{i['city']}.json" for i in index}
+    for f in OUT.glob("*.json"):
+        if f.name not in live and f.name not in ("cities.json", "stats.json"):
+            f.unlink()
     print(f"export: {len(cities)} şehir dosyası, {total} kamera siteye aktarıldı (+ cities.html)")
     for i in sorted(index, key=lambda x: -x["total"])[:8]:
         print(f"  {i['city']:10s} {i['count']:4d}/{i['total']:<5d} {i['label']}")
