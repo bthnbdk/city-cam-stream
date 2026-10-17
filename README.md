@@ -84,6 +84,26 @@ For OBS: add the URL as a **Browser Source** with `overlay=0`.
 - Vision scoring in this run used upscaled montage tiles, which inflates sharpness — the
   quality score keeps a low vision weight for that reason.
 
+## Live
+
+- Web player: **https://city-cam-stream.netlify.app**
+  (e.g. `https://city-cam-stream.netlify.app/?city=istanbul&rotation=5`)
+- Repo: https://github.com/bthnbdk/city-cam-stream
+
+Redeploy after refreshing the data:
+
+```bash
+python3 export_web.py                                  # DB -> site/data/*.json
+export NETLIFY_AUTH_TOKEN=$(cat ~/.netlify-token)
+netlify deploy --prod --dir site --site 3500978d-f0c9-46ce-b20f-18ab7ec9fff3 --no-build
+```
+
+QA (same suite, local or production):
+
+```bash
+QA_BASE=https://city-cam-stream.netlify.app python3 qa.py
+```
+
 ## Licence
 
 Code: MIT. Camera imagery belongs to its owners — publishing this repo grants no rights to
