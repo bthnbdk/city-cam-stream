@@ -104,6 +104,26 @@ QA (same suite, local or production):
 QA_BASE=https://city-cam-stream.netlify.app python3 qa.py
 ```
 
+## Data sources — what actually works (measured 17.10.2026)
+
+| Source | Cameras | Kind | Status |
+|---|---|---|---|
+| **YouTube live embeds** (`yt_live`) | 229 in 64 cities | `iframe` | ✅ real live video (oEmbed-verified embeddable) |
+| **TfL JamCams** (London) | 890 (811 active) | `mp4` | ✅ works, 352×288 ~10 s clip |
+| **Fintraffic Digitraffic** (Finland) | 2 279 | `snapshot` | ✅ works, 1280×720 snapshot cadence |
+| **İBB TKM** (Istanbul) | 635 | `hls` | ⚠️ intermittent (3/22 → 0/24 → 0/3 in minutes) |
+| **SkylineWebcams** | 853 | `hls` | ❌ **excluded** |
+
+**Why SkylineWebcams is excluded:** the token resolves and ffprobe even reports 1920×1080, but the
+segment URLs are literally named `copyright_violation-*.ts` and the frame they serve is a
+SkylineWebcams **logo card**, not the camera image (verified by extracting a segment frame and
+inspecting it). 853 "reachable" cameras that deliver no picture — filtered by `EXCLUDED_SOURCES`
+in `export_web.py`.
+
+## City index
+
+`site/cities.html` lists every city with camera count and the URL parameter to copy.
+
 ## Licence
 
 Code: MIT. Camera imagery belongs to its owners — publishing this repo grants no rights to
