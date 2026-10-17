@@ -1,0 +1,8 @@
+__pycache__/
+*.pyc
+.netlify/
+data/cameras.db
+data/cameras.db-journal
+data/frames/
+data/run.log
+/tmp/

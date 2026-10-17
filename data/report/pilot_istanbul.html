@@ -1,0 +1,243 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Canlı Şehir Kamerası Yayın Sistemi — Pilot: İstanbul (Keşif & Tasarım)</title>
+<style>
+:root{--bg:#0c1116;--card:#141b23;--fg:#e8eef5;--mut:#93a2b3;--acc:#4cc2ff;--warn:#ffb020;--bad:#ff5c5c;--ok:#3ddc84}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:16px/1.55 -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif}
+.wrap{max-width:1100px;margin:0 auto;padding:18px 14px 60px}
+h1{font-size:26px;line-height:1.25;margin:6px 0 4px}
+h2{font-size:20px;margin:34px 0 10px;padding-bottom:6px;border-bottom:1px solid #24303c}
+h3{font-size:17px;margin:20px 0 6px;color:var(--acc)}
+.sub{color:var(--mut);font-size:14px}
+.card{background:var(--card);border:1px solid #223040;border-radius:14px;padding:14px;margin:12px 0}
+.badge{display:inline-block;min-width:26px;text-align:center;font-weight:700;border-radius:8px;padding:2px 8px;color:#06121a}
+.badge.A{background:var(--ok)} .badge.B{background:var(--warn)} .badge.C{background:var(--bad);color:#fff}
+.badge.D,.badge.d,.badge.K,.badge.T{background:#7f8fa3;color:#fff}
+table{width:100%;border-collapse:collapse;font-size:14px;display:block;overflow-x:auto;white-space:nowrap}
+th,td{border-bottom:1px solid #223040;padding:8px 10px;text-align:left;vertical-align:top}
+th{color:var(--mut);font-weight:600;font-size:13px;text-transform:uppercase;letter-spacing:.03em}
+td.ev{white-space:normal;max-width:520px;font-size:13px;color:#c8d6e5}
+td.risk{white-space:normal;max-width:380px;color:#ffd9a0}
+.muted{color:var(--mut);font-size:13px}
+.num{font-variant-numeric:tabular-nums;text-align:right}
+.kpi{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.kpi div{background:#101821;border:1px solid #223040;border-radius:12px;padding:12px}
+.kpi b{display:block;font-size:24px;color:var(--acc)}
+.alert{border-left:4px solid var(--warn);background:#1d1a12}
+.danger{border-left:4px solid var(--bad);background:#1e1414}
+.good{border-left:4px solid var(--ok);background:#101e16}
+img{max-width:100%;border-radius:10px;border:1px solid #223040}
+code{background:#0a1219;padding:2px 6px;border-radius:6px;font-size:13px;word-break:break-all}
+ul{padding-left:20px} li{margin:4px 0}
+.foot{color:var(--mut);font-size:13px;margin-top:40px;border-top:1px solid #223040;padding-top:12px}
+</style></head><body><div class="wrap">
+<h1>Şehir Bazlı 24/7 Canlı Kamera Yayın Sistemi</h1>
+<div class="sub">Keşif + tasarım raporu · Pilot şehir: <b>İstanbul</b> · Üretim: 17.10.2026 17:57<br>
+<b>Durum: HİÇBİR YAYIN AÇILMADI, KANAL OLUŞTURULMADI.</b> Bu rapor yalnızca yapılabilirlik ve ölçüm sonuçlarını içerir.</div>
+
+<h2>1. Yönetici özeti</h2>
+<div class="card danger"><b>En kritik bulgu:</b> İstanbul için <b>lisans sınıfı A (açıkça izinli)</b> manzaralı kamera <b>bulunamadı</b>.
+Belediyenin resmî trafik kamerası servisi teknik olarak erişilebilir ama lisans beyanı yok; ticari webcam siteleri (SkylineWebcams vb.)
+sözleşmelerinde yeniden yayını <u>açıkça yasaklıyor</u>. Rakip kanal (6.899 eşzamanlı izleyici) bu nedenle <b>hukuki risk taşıyor</b>.</div>
+<div class="card good"><b>Talep doğrulandı:</b> İstanbul'da canlı kamera formatı çalışıyor — ölçülen tek yayın 1080p30,
+<b>6.899 eşzamanlı izleyici</b>. Sorun talep değil, <b>kaynak hakkı</b>.</div>
+<div class="card"><b>Önerilen yol:</b> (1) İBB'den yazılı izin (kamu kurumu, açık veri talebi), (2) B sınıfı kamera sahipleriyle
+(otel/liman/turizm ofisi) anlaşma, (3) <b>kendi PTZ kameran</b> — uzun vadede tek tam kontrol edilebilir A sınıfı kaynak.
+A sınıfı açık lisanslı havuz (Finlandiya CC BY 4.0, Londra OGL) <i>gerçek</i> ama teknik kalitesi/formatı 24/7 manzara yayınına uygun değil.</div>
+
+<h2>2. Ölçülen teknik bulgular (bu koşuda test edildi)</h2>
+<div class="kpi">
+ <div><span class="muted">DB'ye yazılan kamera</span><b>3804</b></div>
+ <div><span class="muted">İBB kamera kaydı</span><b>635</b></div>
+ <div><span class="muted">İBB medya erişimi</span><b>3/22</b></div>
+ <div><span class="muted">Lisans sınıfı A kutu</span><b>2279</b></div>
+</div>
+<div class="card"><h3>İBB TKM (İstanbul) — ölçüm</h3>
+<ul>
+<li>Endpoint: <code>sehirharitasigateway.ibb.gov.tr/api/DUoq/api/Tkm/trafikKameralari</code> (anonim token: <code>/auth/anonim?lang=tr</code>) → <b>635 kamera</b>, GeoJSON.</li>
+<li>Akış: <code>hls.ibb.gov.tr/tkm{1,2,4}/hls/{id}.stream/playlist.m3u8</code>. Erişim testi: <b>3/22</b> → dakikalar içinde <b>0/24</b> → <b>0/3</b>. Yani <u>oynak/kararsız erişim</u>.</li>
+<li>Anlık kare ucu (<code>CameraImage.ashx</code>): HTTP 200 ama <b>4/4 "kamera yok" yer tutucu görüntüsü</b> (hepsi tam 7933 bayt).</li>
+<li>Çalışan örnekler: 352×288 @12 fps, 640×352 @10 fps, 640×352 @7 fps → <b>1080p değil</b>.</li>
+<li>İçerik: adlandırmada meydan/sahil/skyline neredeyse yok (GALATA 0, SULTANAHMET 0, KIZ KULESİ 1, BOĞAZ 3) → <b>trafik odaklı, turistik değil</b>.</li>
+</ul></div>
+<div class="card"><h3>A sınıfı havuz (karşılaştırma)</h3>
+<ul>
+<li><b>Fintraffic / Digitraffic (Finlandiya)</b> — CC BY 4.0, ticari kullanım serbest (kanıtlı). 2.279 preset, <b>1280×720 JPEG</b>, 6/6 erişilebilir. Ancak bu <b>video değil</b>, aralıklı kare akışı.</li>
+<li><b>TfL JamCams (Londra)</b> — OGL v2 tabanlı TfL Transport Data Service lisansı. 890 kamera, 811 aktif, 10/10 erişildi; ölçülen <b>352×288 @25 fps, ~10 sn klip</b>.</li>
+</ul></div>
+
+<h2>3. Kalite skoru ve görsel puanlama</h2>
+<div class="card alert"><b>Ölçüm yöntemi uyarısı (confound):</b> Vision puanı, montaj hücresi 960×540'a
+<i>büyütülerek</i> üretildi; bu <b>netlik puanını yukarı çeker</b>. Bu yüzden q_total içinde çözünürlük bileşeni
+<b>ölçülen gerçek piksele</b> göre hesaplanır, vision'a ağırlık %15 verilir. Kesin karar için native çözünürlükte puanlama gerekir.</div>
+<table><tr><th>Kaynak</th><th class="num">Kamera</th><th class="num">Erişilebilir</th><th class="num">Ort. q_total</th></tr><tr><td>digitraffic</td><td class="num">6</td>
+      <td class="num">6/6</td><td class="num">5.2</td></tr><tr><td>ibb_tkm</td><td class="num">3</td>
+      <td class="num">3/3</td><td class="num">2.83</td></tr><tr><td>tfl_jamcam</td><td class="num">10</td>
+      <td class="num">10/10</td><td class="num">2.27</td></tr></table>
+<p class="muted">Vision puanları (data/vision_scores.json): TfL Piccadilly Circus 7,5 · TfL ortalama 7 · Digitraffic ortalama 7 (bir kare 2: sadece asfalt).</p>
+<img src="assets/montage_london_tfl.png" alt="TfL Londra montajı">
+<p class="muted">TfL montajı — 352×288 kaynak; montajda büyütüldüğü için bulanıklık gizleniyor.</p>
+<img src="assets/montage_helsinki_fi.png" alt="Finlandiya montajı">
+<p class="muted">Digitraffic Helsinki montajı — 1280×720 kaynak (A sınıfı, CC BY 4.0).</p>
+
+<h2>4. Kamera veritabanı</h2>
+<table><tr><th>Kaynak</th><th>Şehir</th><th>Sınıf</th><th class="num">Kamera</th><th class="num">Erişilebilir</th><th class="num">Ort. skor</th></tr><tr><td>digitraffic</td><td>finland</td>
+      <td><span class="badge A">A</span></td>
+      <td class="num">1854</td><td class="num">-</td>
+      <td class="num">-</td></tr><tr><td>tfl_jamcam</td><td>london</td>
+      <td><span class="badge C">C</span></td>
+      <td class="num">890</td><td class="num">10</td>
+      <td class="num">2.27</td></tr><tr><td>ibb_tkm</td><td>istanbul</td>
+      <td><span class="badge C">C</span></td>
+      <td class="num">635</td><td class="num">3</td>
+      <td class="num">2.83</td></tr><tr><td>digitraffic</td><td>oulu</td>
+      <td><span class="badge A">A</span></td>
+      <td class="num">140</td><td class="num">-</td>
+      <td class="num">-</td></tr><tr><td>digitraffic</td><td>helsinki</td>
+      <td><span class="badge A">A</span></td>
+      <td class="num">132</td><td class="num">6</td>
+      <td class="num">5.2</td></tr><tr><td>digitraffic</td><td>tampere</td>
+      <td><span class="badge A">A</span></td>
+      <td class="num">104</td><td class="num">-</td>
+      <td class="num">-</td></tr><tr><td>digitraffic</td><td>turku</td>
+      <td><span class="badge A">A</span></td>
+      <td class="num">49</td><td class="num">-</td>
+      <td class="num">-</td></tr></table>
+<h3>İstanbul pilot — ilk kayıtlar</h3>
+<table><tr><th>Kamera</th><th>Tip</th><th class="num">Ölçülen çözünürlük</th><th class="num">fps</th><th>Not</th></tr><tr><td>AKOM</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/2.stream/playlist.m3u8: End of file</td></tr><tr><td>AKSARAY</td><td>tren</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/3.stream/playlist.m3u8: Server returned 5XX Server Error reply</td></tr><tr><td>ALİBEYKÖY MEYDANI</td><td>meydan</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm2/hls/4.stream/playlist.m3u8: Connection reset by peer</td></tr><tr><td>ALTUNİZADE TÜNEL 1</td><td>trafik</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm2/hls/6.stream/playlist.m3u8: End of file</td></tr><tr><td>ALTUNİZADE TÜNEL</td><td>trafik</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm2/hls/5.stream/playlist.m3u8: End of file</td></tr><tr><td>S. YOLU ATAKÖY 1</td><td>diger</td>
+      <td class="num">352×288</td><td class="num">12.0</td>
+      <td class="muted">h264</td></tr><tr><td>S. YOLU ATAKÖY 2</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm1/hls/9.stream/playlist.m3u8: End of file</td></tr><tr><td>S. YOLU GALERİA</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/12.stream/playlist.m3u8: End of file</td></tr><tr><td>ATATÜRK HAVALİMANI</td><td>hava</td>
+      <td class="num">640×352</td><td class="num">10.0</td>
+      <td class="muted">h264</td></tr><tr><td>AYVANSARAY</td><td>tren</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/14.stream/playlist.m3u8: Server returned 5XX Server Error reply</td></tr><tr><td>BAĞDAT CD. ETHEM EFENDİ</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm2/hls/17.stream/playlist.m3u8: End of file</td></tr><tr><td>BAĞDAT CD. FENERYOLU</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/18.stream/playlist.m3u8: End of file</td></tr><tr><td>BAĞDAT CD. GÖZTEPE</td><td>skyline</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/19.stream/playlist.m3u8: Server returned 5XX Server Error reply</td></tr><tr><td>BAĞDAT CD. ŞAŞKINBAKKAL</td><td>diger</td>
+      <td class="num">-×-</td><td class="num">-</td>
+      <td class="muted">erisilemedi: https://hls.ibb.gov.tr/tkm4/hls/20.stream/playlist.m3u8: Server returned 5XX Server Error reply</td></tr></table>
+<h3>Kamera tip dağılımı (tüm DB)</h3><ul><li>diger: <b>3488</b></li><li>trafik: <b>113</b></li><li>skyline: <b>74</b></li><li>kopru: <b>50</b></li><li>sahil: <b>23</b></li><li>tren: <b>23</b></li><li>hava: <b>17</b></li><li>meydan: <b>16</b></li></ul>
+
+<h2>5. Lisans filtresi (kanıtlı)</h2>
+<table><tr><th>Kaynak</th><th>Sınıf</th><th>Kanıt / gerekçe</th></tr><tr><td><b>digitraffic.fi (Fintraffic)</b><div class="muted">Fintraffic Digitraffic (Finlandiya Yol Kameraları)</div></td>
+      <td><span class="badge A">A</span></td>
+      <td class="ev">'Fintraffic's open data is licensed under the Creative Commons 4.0 By license. It gives the right to distribute, remix, tweak, and build upon our data, even commercially, as long as you credit the source.' — https://www.digitraffic.fi/en/terms-of-service/ (17.10.2026)</td></tr><tr><td><b>harita.istanbul (İstanbul Büyükşehir Belediyesi)</b><div class="muted">İBB Trafik Kameraları (TKM)</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">Açık lisans beyanı YOK. Servis kamuya açık İBB web servisi; kullanım şartları/atıf zorunluluğu yayınlanmamış. İzin alınmadan yeniden yayın = belirsiz risk.</td></tr><tr><td><b>skylinewebcams.com</b><div class="muted">SkylineWebcams (VisioRay)</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">ToS: '...it cannot be used, modified, adapted, reformatted, downloaded, reproduced (even in partial form), transmitted, published, transferred, copied, sold, exploited, used to create videos and/or montages...' ve 'It is, furthermore, prohibited to reproduce frames that are generated by the webcams...' Paylaşım yalnızca sitenin kendi paylaşım linkleriyle. — https://www.skylinewebcams.com/en/terms-of-use.html</td></tr><tr><td><b>Transport for London (tfl.gov.uk)</b><div class="muted">TfL JamCams (Londra Trafik Kameraları)</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">TfL açık veri sayfasında JamCam video/kare için açık lisans metni doğrulanamadı (yalnızca marka/atıf kuralları görüldü). Kanıt yok -&gt; C.</td></tr><tr><td><b>webcamtaxi.com</b><div class="muted">WebcamTaxi (dizin)</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">Dizin sitesi; yayın hakları ilgili kamera sahibinde. Sitede açık yeniden yayın izni yok. Kanıt yok -&gt; C.</td></tr><tr><td><b>windy.com</b><div class="muted">Windy Webcams API v3</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">Anahtarsız çağrı 403: 'Missing Header x-windy-api-key'. Lisans/atıf koşulları anahtar kullanıcı sözleşmesine bağlı; kamera içeriği yükleyen kullanıcıya ait -&gt; yeniden yayın izni ayrıca alınmalı. Kanıt yok -&gt; C.</td></tr><tr><td><b>youtube.com</b><div class="muted">YouTube 24/7 canlı kamera kanalları (rakip/istek ölçümü)</div></td>
+      <td><span class="badge C">C</span></td>
+      <td class="ev">YouTube ToS: başka bir yayıncının canlı yayınını yeniden yayınlamak (restream) izin gerektirir; üçüncü taraf içeriğinin kopyalanması yasak. Kanıt yok -&gt; C. ANCAK: yayıncı ile anlaşma = B yolu.</td></tr></table>
+<div class="card"><b>Kural:</b> Yayın havuzuna YALNIZCA <span class="badge A">A</span> ve yazılı izni alınmış
+<span class="badge B">B</span> kameralar girer. <span class="badge C">C</span> = kullanılmaz. Kanıt metni olmayan kaynak
+otomatik C'ye düşer (koddaki <code>Source.__post_init__</code>).</div>
+
+<h2>6. OBS yayın tasarımı</h2>
+<div class="card"><h3>Sahne yapısı (şablondan üretildi)</h3>
+<ul>
+<li><b>{Şehir} · Tam Kamera</b> — ana akış tam ekran + overlay bar (şehir adı, yerel saat, hava, gün batımı, kamera etiketi).</li>
+<li><b>{Şehir} · PiP (Ana+Köşe)</b> — ana kamera tam ekran, ikinci kamera sağ altta %25 ölçek.</li>
+<li><b>{Şehir} · 2x2 Grid</b> — dört kamera 960×540 hücrelerde.</li>
+<li><b>STANDBY</b> — tüm kameralar düşerse otomatik geçilen bekleme kartı (kırmızı nokta + "yeniden bağlanıyor").</li>
+</ul>
+<h3>Rotasyon ve dayanıklılık (<code>rotate.py</code>)</h3>
+<ul>
+<li>Varsayılan kalma süresi <b>240 sn</b>, geçiş <b>Fade 800 ms</b> (obs-websocket v5: <code>SetCurrentSceneTransition</code>).</li>
+<li>Her <b>45 sn</b>'de akış sağlığı kontrol edilir (<code>#EXTM3U</code> başlığı / HTTP 200). Kopan kamera kara listeye alınır, sıradakine geçilir.</li>
+<li>Tüm kameralar düşerse <b>STANDBY</b> sahnesine geçilir, 30 sn'de bir yeniden denenir.</li>
+<li>Overlay etiketi her geçişte URL parametresiyle güncellenir (<code>?cam=Galata</code>).</li>
+</ul>
+<h3>Ses</h3>
+<ul><li>Kamera sesi <b>kapalı</b> (<code>mixers</code> kısık) — telifsiz ambient müzik ayrı kaynaktan; müzik lisansı yayın öncesi yazılı olarak arşivlenir.</li></ul>
+<h3>Overlay verisi (ücretsiz API)</h3>
+<ul><li>Yerel saat (tarayıcı), hava + gün batımı: <b>Open-Meteo</b> (anahtarsız, ücretsiz). Döviz kuru isteğe bağlı.</li></ul>
+</div>
+
+<h2>7. YouTube metadata şablonu</h2>
+<div class="card"><h3>Başlık</h3><code>🔴 Istanbul Live Cam 24/7 | Bosphorus, Taksim, Galata Tower</code>
+<ul><li>İlk 45 karakterde şehir + 'Live Cam' geçmeli (mobil kesme).</li><li>24/7 ibaresi ilk 60 karakterde.</li><li>Spesifik semt/simge adı (Taksim, Bosphorus) arama niyetini yakalar.</li><li>Yıllık başlık değişimi (örn. '2026') YAPILMAZ - URL/izlenme sürekliliği bozulur.</li></ul>
+<h3>Etiketler</h3><p class="muted">istanbul live cam, istanbul live, live cam 24/7, city cam, live stream, webcam, istanbul webcam, turkey, travel, city view, istanbul 4k</p>
+<h3>Hashtag</h3><p>#LiveCam #24_7 #CityView</p>
+<ul><li>3 adet; Türkçe karakter YOK (örn. #CanliKamera değil #LiveCam).</li><li>Emoji YOK. Alt satırda kanal/kaynak tanıtımı YOK.</li></ul>
+<h3>Thumbnail brief</h3><p>ISTANBUL / LIVE — 1280x720 (16:9, &lt;2 MB)</p>
+<ul><li>En fazla 2-3 kelime, punto BÜYÜK (ekranın ~%25 yüksekliği).</li><li>Görselde Türkçe karakter ve emoji KULLANILMAZ.</li><li>Kırmızı 'LIVE' noktası + şehir silüeti; her yıl sabit kalır (marka tutarlılığı).</li></ul>
+<h3>Açıklama (tam metin dosyası: data/istanbul/youtube_aciklama_istanbul.txt)</h3>
+<pre style="white-space:pre-wrap;font-size:13px;color:#c8d6e5">Istanbul canlı şehir kamerası — Bosphorus, Taksim, Galata Tower ve daha fazlası, 24 saat kesintisiz.
+
+Bu yayın birden fazla kamerayı 240 saniyede bir yumuşak geçişle döndürür. Yerel saat, hava durumu ve gün batımı bilgisi ekranda gösterilir.
+
+⏱️ Bölümler
+00:00 Canlı görüntü
+
+📍 Kamera konumları
+- Bosphorus
+- Taksim
+- Galata Tower
+- Maiden's Tower
+- Golden Horn
+- Hagia Sophia
+
+📷 Kaynaklar ve atıflar (ATTRIBUTION)
+Kamera kaynakları: yayın izni süreci devam ediyor. Bu yayındaki görüntüler yalnızca izinli kaynaklardan alınır.
+(NOT: İstanbul pilotunda ölçüm anında A sınıfı kamera yok; metin yer tutucudur.)
+
+Yerel saat dilimi: Istanbul (UTC+03:00)
+
+Bu yayın bir şehir manzarası yayınıdır; kişisel veri içermez. Görüntülerde insanların yakın plan yüzü gösterilmez.</pre></div>
+
+<h2>8. Ölçekleme: 10 aday şehir ve risk notları</h2>
+<div class="card good"><b>Talep ölçümü (17.10.2026):</b> Istanbul kamerası 498 aboneli bir kanaldan 6.912 eşzamanlı izleyici çekiyor; Seoul tren kamerası 548 abonelik kanaldan 47.459. Yani bu formatta TALEP ABONE SAYISINDAN BAĞIMSIZ ve çok yüksek — giriş bariyeri abone değil, KAMERA HAKKI.</div>
+<div class="card alert"><b>Ölçüm uyarısı:</b> YT arama sonuçları 'kirli' olabilir: Heathrow havalimanı kamerası Londra/Prag/Helsinki/Dubai aramalarında da ilk sıraya çıktı. Bu nedenle 'eşzamanlı izleyici' değeri ilgili şehre ait bir kamera olduğu doğrulanmadan karar verilmemelidir.</div>
+<table><tr><th>Şehir</th><th>Kamera</th><th class="num">Eşzamanlı izleyici</th><th class="num">Kanal abone</th><th class="num">Canlı sonuç (top10)</th></tr>
+<tr><td><b>Seoul</b></td><td>Seoul Rail Live (KTX/metro tren kamerası)</td><td class="num">47,459</td><td class="num">548</td><td class="num">10/10</td></tr><tr><td><b>Paris</b></td><td>Paris Walking Tour 4K (yaya turu)</td><td class="num">27,189</td><td class="num">36,700</td><td class="num">10/10</td></tr><tr><td><b>Istanbul</b></td><td>Golden Horn: Galata &amp; Kız Kulesi</td><td class="num">6,912</td><td class="num">498</td><td class="num">4/10</td></tr><tr><td><b>New York</b></td><td>Street Cam (araç içi sokak)</td><td class="num">2,599</td><td class="num">5,150</td><td class="num">10/10</td></tr><tr><td><b>Hong Kong</b></td><td>HK Airport Live</td><td class="num">1,408</td><td class="num">2,430</td><td class="num">6/10</td></tr><tr><td><b>Tokyo</b></td><td>OmeCam deprem kamerası</td><td class="num">752</td><td class="num">6,010</td><td class="num">10/10</td></tr><tr><td><b>Zurich</b></td><td>Zürichsee Livecam</td><td class="num">96</td><td class="num">11</td><td class="num">1/10</td></tr><tr><td><b>Rome</b></td><td>(şehir kamerası yok — kuş yemi kamerası çıktı)</td><td class="num">78</td><td class="num">385</td><td class="num">1/10</td></tr></table>
+<table><tr><th>#</th><th>Şehir</th><th>Kamera kaynağı</th><th>Lisans</th><th>Ölçüm</th><th>Risk</th><th>Sonraki adım</th><th>Talep (YT)</th></tr><tr><td class="num">1</td><td><b>Istanbul</b><div class="muted">TR</div></td><td>İBB TKM — 635 resmî trafik kamerası (HLS) + belediye açık veri</td><td><span class="badge B">B (izin alınabilir)</span></td><td>635 kamera meta verisi alındı. HLS erişimi: 3/22 → 0/24 → 0/3 (dakikalar içinde değişti, oynak). Anlık kare ucu 4/4 'kamera yok' yer tutucusu. Çalışan akışlar 352×288–640×352. Talep: 6.912 eşzamanlı izleyici / 498 abone.</td><td class="risk">YÜKSEK: (a) izin yok → telif/kaldırma riski, (b) İBB HLS erişimi bu ağdan kararsız → TR tabanlı ingest şart, (c) kameralar trafik odaklı, manzara değil → görsel çekicilik düşük</td><td>İBB'ye yazılı izin başvurusu + TR IP'den 72 saat kesintisiz uptime ölçümü</td><td>6912 eşzamanlı (top canlı)</td></tr><tr><td class="num">2</td><td><b>Seoul</b><div class="muted">KR</div></td><td>Seoul TOPIS kamu kameraları / tren hattı kameraları (doğrulanacak)</td><td><span class="badge d">doğrulanmadı — kamu açık veri portalı taranacak</span></td><td>TALEP EN YÜKSEK: 47.459 eşzamanlı izleyici (548 abone), 10/10 canlı sonuç</td><td class="risk">Lisans/dil engeli; kamu API'leri çoğunlukla Korece dokümante</td><td>topis.seoul.go.kr açık veri kataloğunda kamera endpoint'i ara; talep zaten kanıtlı</td><td>47459 eşzamanlı (top canlı)</td></tr><tr><td class="num">3</td><td><b>Paris</b><div class="muted">FR</div></td><td>Belediye/turizm kameraları + yaya turu (walking tour) formatı</td><td><span class="badge d">doğrulanmadı</span></td><td>27.189 eşzamanlı izleyici (36.700 abone), 10/10 canlı sonuç — talep güçlü</td><td class="risk">Öne çıkan içerik 'yaya turu' (mobil yayın) — bizim sabit kamera modeline birebir uymuyor</td><td>Paris açık veri portalında kamera veri seti ara; sabit kamera + şehir manzarası konumlandırması test et</td><td>27189 eşzamanlı (top canlı)</td></tr><tr><td class="num">4</td><td><b>London</b><div class="muted">UK</div></td><td>TfL JamCams — 890 kamera (811 aktif)</td><td><span class="badge A">A (OGL v2 tabanlı TfL Transport Data Service) — JamCam kapsam teyidi açık madde</span></td><td>10/10 erişilebilir; 352×288 @25fps, ~10 sn klip. Vision: Piccadilly Circus 7,5/10</td><td class="risk">TEKNİK: 352×288 → 1080p yayında büyütme bulanıklığı; ölçülen 'talep' aslında Heathrow havalimanı kamerası (şehir kamerası değil)</td><td>TfL'e lisans kapsamı teyit e-postası; kabul edilirse 2x2/3x3 'trafik duvarı' formatı</td><td>37966 eşzamanlı (top canlı)</td></tr><tr><td class="num">5</td><td><b>Helsinki</b><div class="muted">FI</div></td><td>Fintraffic Digitraffic — 2.279 preset (Helsinki 132)</td><td><span class="badge A">A — CC BY 4.0, ticari kullanım serbest, atıf şart (kanıtlı)</span></td><td>6/6 erişilebilir, 1280×720 JPEG anlık kare. Vision ortalama 7/10 (bir kare 2/10)</td><td class="risk">FORMAT: video değil, aralıklı kare → '24/7 canlı kamera' vaadini karşılamaz; talep düşük (Heathrow sonucu karışıklık)</td><td>Kare yenileme sıklığını ölç; &lt;10 sn ise hızlandırılmış kare akışı formatı dene</td><td>37966 eşzamanlı (top canlı)</td></tr><tr><td class="num">6</td><td><b>Amsterdam</b><div class="muted">NL</div></td><td>Rijkswaterstaat açık veri (ücretsiz anahtar) / Schiphol kameraları</td><td><span class="badge d">doğrulanmadı (RWS veri lisansı kontrol edilecek)</span></td><td>7.277 eşzamanlı izleyici (Schiphol kalkış kamerası, 61.000 abone), 6/10 canlı sonuç</td><td class="risk">Havalimanı/liman kameraları özel işletmeci → izin süreci uzun</td><td>RWS açık veri anahtarı al (ücretsiz), kamera veri setini çek</td><td>7277 eşzamanlı (top canlı)</td></tr><tr><td class="num">7</td><td><b>New York</b><div class="muted">US</div></td><td>NYSDOT 511 / EarthCam hattı (dizin)</td><td><span class="badge d">doğrulanmadı; EarthCam içeriği lisanslı (ücretli)</span></td><td>2.599 eşzamanlı izleyici (araç içi sokak kamerası), 10/10 canlı sonuç</td><td class="risk">ABD'de açık veri kameraları çoğunlukla havalimanı/otoyol; manzara izinleri ticari (EarthCam)</td><td>511NY API anahtarı (ücretsiz) + lisans metni incele</td><td>2599 eşzamanlı (top canlı)</td></tr><tr><td class="num">8</td><td><b>Tokyo</b><div class="muted">JP</div></td><td>JARTIC / belediye kameraları (deprem kameraları yaygın)</td><td><span class="badge d">doğrulanmadı</span></td><td>752 eşzamanlı izleyici (deprem kamerası), 10/10 canlı sonuç</td><td class="risk">Ekosistem doygun; turizm manzarası için izinli kaynak bulmak zor</td><td>JARTIC lisans koşullarını oku (ticari kullanım kısıtlı olabilir)</td><td>752 eşzamanlı (top canlı)</td></tr><tr><td class="num">9</td><td><b>Hong Kong</b><div class="muted">HK</div></td><td>HK Transport Department / havalimanı (doğrulanacak)</td><td><span class="badge d">doğrulanmadı</span></td><td>1.408 eşzamanlı izleyici (havalimanı), 6/10 canlı sonuç</td><td class="risk">Havalimanı kameraları işletmeci lisanslı; skyline için ayrı izin</td><td>gov.hk açık veri portalında 'traffic camera' veri seti ara</td><td>1408 eşzamanlı (top canlı)</td></tr><tr><td class="num">10</td><td><b>Zurich</b><div class="muted">CH</div></td><td>Özel/otel kameraları (metacube vb.)</td><td><span class="badge d">doğrulanmadı; özel mülk kameraları → sahibinden izin</span></td><td>96 eşzamanlı izleyici, 11 aboneli kanal — düşük talep ama düşük rekabet</td><td class="risk">Talep zayıf; niş kanal olarak denenebilir</td><td>Kamera sahibiyle iletişim (B sınıfı izin yolu) test et</td><td>96 eşzamanlı (top canlı)</td></tr></table>
+<div class="card"><b>Elennenler:</b><ul><li>Insecam ve 'korumasız kamera' dizinleri: yasa dışı/izinsiz — hiç listelenmedi.</li><li>Özel güvenlik kameraları, pencere içi ve yakın plan yüz içeren kameralar: mahremiyet politikası gereği baştan elendi.</li><li>SkylineWebcams / VisioRay: ToS 'çoğaltma, yeniden yayın, video/montaj oluşturma' yasak diyor → C sınıfı (ticari lisans görüşmesi mümkün).</li><li>EarthCam / webcamtaxi: içerik sahibi/operatör lisansı; dizin sitesi izin vermez → C sınıfı.</li><li>YouTube'daki diğer canlı kamera kanalları: restream ToS ihlali → C sınıfı (yayıncı ile anlaşma B yoludur).</li></ul></div>
+
+<h2>9. Ölçekleme mimarisi (parametrik)</h2>
+<div class="card"><pre style="white-space:pre-wrap;font-size:13px">python3 cam.py discover --city &lt;şehir&gt;   # kaynak çekimi → SQLite
+python3 cam.py probe   --city &lt;şehir&gt;    # gerçek çözünürlük/fps ölçümü
+python3 cam.py uptime                     # periyodik sağlık turu (cron)
+python3 cam.py score                      # ölçülen verilerden kalite skoru
+python3 cam.py obs    --city &lt;şehir&gt;      # OBS sahne koleksiyonu + rotate.py + overlay
+python3 cam.py meta   --city &lt;şehir&gt;      # YouTube metadata
+python3 cam.py report                     # bu rapor</pre>
+Yeni şehir eklemek için <code>discovery/sources.py</code>'a kanıt metniyle kaynak eklenir; lisans sınıfı kanıtsızsa otomatik C olur.</div>
+
+<h2>10. Açık maddeler (henüz doğrulanmadı)</h2>
+<div class="card alert"><ul>
+<li><b>İBB yazılı izni</b> — alınmadı. İzin olmadan yayın açılması önerilmez.</li>
+<li><b>7 günlük uptime</b> — henüz toplanmadı; cron kuruldu, ilk anlamlı sonuç 7 gün sonra.</li>
+<li><b>TR tabanlı ingest</b> — bu makineden İBB HLS erişimi oynak; kesin ölçüm için TR IP gerekir.</li>
+<li><b>TfL lisans kapsamı</b> — JamCam'in "Transport Data Service" kapsamında olduğu yazılı teyit edilmedi.</li>
+<li><b>Müzik lisansı</b> — ambiyans parçalarının ticari yayın lisansı henüz arşivlenmedi.</li>
+<li><b>VPS bütçesi</b> — 24/7 yeniden kodlama için CPU/bant genişliği hesabı yapılacak (henüz hesap yok, iddia edilmiyor).</li>
+<li><b>Vision puanı çözünürlük confound'u</b> — native çözünürlükte yeniden puanlama yapılacak.</li>
+</ul></div>
+
+<div class="foot">Üretim: Hermes · Pilot: İstanbul · Veri: data/cameras.db (3804 kayıt) ·
+Kaynak dosyaları: discovery/sources.py, cam.py, obspack.py, ytmeta.py · Hiçbir yayın açılmadı.</div>
+</div></body></html>

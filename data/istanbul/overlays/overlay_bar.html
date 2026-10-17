@@ -1,0 +1,41 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8">
+<style>
+ html,body{margin:0;background:transparent;font-family:Inter,'Segoe UI',system-ui,sans-serif}
+ .bar{display:flex;gap:18px;align-items:center;padding:10px 18px;border-radius:14px;
+      background:rgba(10,14,22,.62);backdrop-filter:blur(8px);color:#fff;
+      box-shadow:0 4px 18px rgba(0,0,0,.35)}
+ .city{font-weight:700;font-size:34px;letter-spacing:.3px}
+ .sep{width:1px;height:34px;background:rgba(255,255,255,.25)}
+ .clock{font-variant-numeric:tabular-nums;font-size:30px;font-weight:600}
+ .meta{display:flex;flex-direction:column;line-height:1.15}
+ .k{font-size:16px;opacity:.75} .v{font-size:22px;font-weight:600}
+ .cam{font-size:20px;opacity:.9;padding-left:6px}
+</style></head><body>
+<div class="bar">
+  <div class="city">Istanbul</div>
+  <div class="sep"></div>
+  <div class="clock" id="clock">--:--:--</div>
+  <div class="sep"></div>
+  <div class="meta"><span class="k">Yerel saat (Europe/Istanbul)</span><span class="v" id="tzname">Bosphorus · Taksim · Galata</span></div>
+  <div class="sep"></div>
+  <div class="meta"><span class="k">Hava · Gün batımı</span><span class="v" id="wx">yükleniyor…</span></div>
+  <div class="cam" id="camlabel"></div>
+</div>
+<script>
+const TZ="Europe/Istanbul", LAT=41.0061, LON=28.8814;
+function tick(){ const d=new Date();
+  document.getElementById('clock').textContent =
+    d.toLocaleTimeString('tr-TR',{timeZone:TZ,hour12:false}); }
+setInterval(tick,1000); tick();
+// Kamera etiketi: rotate.py tarafından URL parametresi ile beslenir (?cam=Galata)
+const p=new URLSearchParams(location.search);
+document.getElementById('camlabel').textContent = p.get('cam') ? '· '+p.get('cam') : '';
+// Hava + gün batımı: Open-Meteo (ücretsiz, anahtarsız)
+fetch(`https://api.open-meteo.com/v1/forecast?latitude=$41.0061&longitude=$28.8814`
+ +`&current=temperature_2m,weather_code&daily=sunset&timezone=${encodeURIComponent(TZ)}`)
+ .then(r=>r.json()).then(j=>{
+   const t=Math.round(j.current.temperature_2m), c=j.current.weather_code;
+   const s=(j.daily.sunset[0]||'').slice(11,16);
+   document.getElementById('wx').textContent=`${t}°C · kod ${c} · batı${s?('m '+s):'ım yok'}`;
+ }).catch(()=>{document.getElementById('wx').textContent='hava: yok';});
+</script></body></html>

@@ -1,0 +1,42 @@
+{
+ "612": {
+  "q_visual": 7,
+  "kaynak": "TfL 352x288 mp4",
+  "not": "vision montaj: komp/netlik/isik/uygunluk ort.; UPSCALE CONFOUND (352x288->960x540)"
+ },
+ "613": {
+  "q_visual": 8,
+  "kaynak": "TfL 352x288 mp4",
+  "not": "vision montaj: komp/netlik/isik/uygunluk ort.; UPSCALE CONFOUND (352x288->960x540)"
+ },
+ "614": {
+  "q_visual": 7.5,
+  "kaynak": "TfL 352x288 mp4",
+  "not": "vision montaj: komp/netlik/isik/uygunluk ort.; UPSCALE CONFOUND (352x288->960x540)"
+ },
+ "615": {
+  "q_visual": 6.5,
+  "kaynak": "TfL 352x288 mp4",
+  "not": "vision montaj: komp/netlik/isik/uygunluk ort.; UPSCALE CONFOUND (352x288->960x540)"
+ },
+ "1535": {
+  "q_visual": 7,
+  "kaynak": "Digitraffic 1280x720 JPEG",
+  "not": "vision montaj; anlik kare (akis degil)"
+ },
+ "1536": {
+  "q_visual": 8,
+  "kaynak": "Digitraffic 1280x720 JPEG",
+  "not": "vision montaj; anlik kare (akis degil)"
+ },
+ "1537": {
+  "q_visual": 7,
+  "kaynak": "Digitraffic 1280x720 JPEG",
+  "not": "vision montaj; anlik kare (akis degil)"
+ },
+ "1538": {
+  "q_visual": 2,
+  "kaynak": "Digitraffic 1280x720 JPEG",
+  "not": "vision montaj; anlik kare (akis degil)"
+ }
+}

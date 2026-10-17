@@ -1,0 +1,124 @@
+{
+  "yontem": "Sıralama: (1) turistik talep — YT 'Canlı' aramasında ilk canlı yayının EŞZAMANLI izleyici sayısı (canlıda view_count = eşzamanlı), (2) doğrulanmış izinli/açık kamera varlığı, (3) teknik kalite, (4) hukuki risk. Ölçümler 17.10.2026 tarihinde bu makineden alınmıştır.",
+  "olcum_uyarisi": "YT arama sonuçları 'kirli' olabilir: Heathrow havalimanı kamerası Londra/Prag/Helsinki/Dubai aramalarında da ilk sıraya çıktı. Bu nedenle 'eşzamanlı izleyici' değeri ilgili şehre ait bir kamera olduğu doğrulanmadan karar verilmemelidir.",
+  "talep_olcumleri": [
+    {"sehir": "Seoul", "kamera": "Seoul Rail Live (KTX/metro tren kamerası)", "eszamanli_izleyici": 47459, "kanal_abone": 548, "canli_sonuc_top10": 10},
+    {"sehir": "Paris", "kamera": "Paris Walking Tour 4K (yaya turu)", "eszamanli_izleyici": 27189, "kanal_abone": 36700, "canli_sonuc_top10": 10},
+    {"sehir": "Istanbul", "kamera": "Golden Horn: Galata & Kız Kulesi", "eszamanli_izleyici": 6912, "kanal_abone": 498, "canli_sonuc_top10": 4},
+    {"sehir": "New York", "kamera": "Street Cam (araç içi sokak)", "eszamanli_izleyici": 2599, "kanal_abone": 5150, "canli_sonuc_top10": 10},
+    {"sehir": "Hong Kong", "kamera": "HK Airport Live", "eszamanli_izleyici": 1408, "kanal_abone": 2430, "canli_sonuc_top10": 6},
+    {"sehir": "Tokyo", "kamera": "OmeCam deprem kamerası", "eszamanli_izleyici": 752, "kanal_abone": 6010, "canli_sonuc_top10": 10},
+    {"sehir": "Zurich", "kamera": "Zürichsee Livecam", "eszamanli_izleyici": 96, "kanal_abone": 11, "canli_sonuc_top10": 1},
+    {"sehir": "Rome", "kamera": "(şehir kamerası yok — kuş yemi kamerası çıktı)", "eszamanli_izleyici": 78, "kanal_abone": 385, "canli_sonuc_top10": 1}
+  ],
+  "kritik_icgoru": "Istanbul kamerası 498 aboneli bir kanaldan 6.912 eşzamanlı izleyici çekiyor; Seoul tren kamerası 548 abonelik kanaldan 47.459. Yani bu formatta TALEP ABONE SAYISINDAN BAĞIMSIZ ve çok yüksek — giriş bariyeri abone değil, KAMERA HAKKI.",
+  "aday_sehirler": [
+    {
+      "sira": 1,
+      "sehir": "Istanbul",
+      "ulke": "TR",
+      "kamera_kaynagi": "İBB TKM — 635 resmî trafik kamerası (HLS) + belediye açık veri",
+      "lisans_durumu": "B (izin alınabilir): açık lisans beyanı YOK, yazılı izin şart",
+      "olcum": "635 kamera meta verisi alındı. HLS erişimi: 3/22 → 0/24 → 0/3 (dakikalar içinde değişti, oynak). Anlık kare ucu 4/4 'kamera yok' yer tutucusu. Çalışan akışlar 352×288–640×352. Talep: 6.912 eşzamanlı izleyici / 498 abone.",
+      "risk": "YÜKSEK: (a) izin yok → telif/kaldırma riski, (b) İBB HLS erişimi bu ağdan kararsız → TR tabanlı ingest şart, (c) kameralar trafik odaklı, manzara değil → görsel çekicilik düşük",
+      "sonraki_adim": "İBB'ye yazılı izin başvurusu + TR IP'den 72 saat kesintisiz uptime ölçümü"
+    },
+    {
+      "sira": 2,
+      "sehir": "Seoul",
+      "ulke": "KR",
+      "kamera_kaynagi": "Seoul TOPIS kamu kameraları / tren hattı kameraları (doğrulanacak)",
+      "lisans_durumu": "doğrulanmadı — kamu açık veri portalı taranacak",
+      "olcum": "TALEP EN YÜKSEK: 47.459 eşzamanlı izleyici (548 abone), 10/10 canlı sonuç",
+      "risk": "Lisans/dil engeli; kamu API'leri çoğunlukla Korece dokümante",
+      "sonraki_adim": "topis.seoul.go.kr açık veri kataloğunda kamera endpoint'i ara; talep zaten kanıtlı"
+    },
+    {
+      "sira": 3,
+      "sehir": "Paris",
+      "ulke": "FR",
+      "kamera_kaynagi": "Belediye/turizm kameraları + yaya turu (walking tour) formatı",
+      "lisans_durumu": "doğrulanmadı",
+      "olcum": "27.189 eşzamanlı izleyici (36.700 abone), 10/10 canlı sonuç — talep güçlü",
+      "risk": "Öne çıkan içerik 'yaya turu' (mobil yayın) — bizim sabit kamera modeline birebir uymuyor",
+      "sonraki_adim": "Paris açık veri portalında kamera veri seti ara; sabit kamera + şehir manzarası konumlandırması test et"
+    },
+    {
+      "sira": 4,
+      "sehir": "London",
+      "ulke": "UK",
+      "kamera_kaynagi": "TfL JamCams — 890 kamera (811 aktif)",
+      "lisans_durumu": "A (OGL v2 tabanlı TfL Transport Data Service) — JamCam kapsam teyidi açık madde",
+      "olcum": "10/10 erişilebilir; 352×288 @25fps, ~10 sn klip. Vision: Piccadilly Circus 7,5/10",
+      "risk": "TEKNİK: 352×288 → 1080p yayında büyütme bulanıklığı; ölçülen 'talep' aslında Heathrow havalimanı kamerası (şehir kamerası değil)",
+      "sonraki_adim": "TfL'e lisans kapsamı teyit e-postası; kabul edilirse 2x2/3x3 'trafik duvarı' formatı"
+    },
+    {
+      "sira": 5,
+      "sehir": "Helsinki",
+      "ulke": "FI",
+      "kamera_kaynagi": "Fintraffic Digitraffic — 2.279 preset (Helsinki 132)",
+      "lisans_durumu": "A — CC BY 4.0, ticari kullanım serbest, atıf şart (kanıtlı)",
+      "olcum": "6/6 erişilebilir, 1280×720 JPEG anlık kare. Vision ortalama 7/10 (bir kare 2/10)",
+      "risk": "FORMAT: video değil, aralıklı kare → '24/7 canlı kamera' vaadini karşılamaz; talep düşük (Heathrow sonucu karışıklık)",
+      "sonraki_adim": "Kare yenileme sıklığını ölç; <10 sn ise hızlandırılmış kare akışı formatı dene"
+    },
+    {
+      "sira": 6,
+      "sehir": "Amsterdam",
+      "ulke": "NL",
+      "kamera_kaynagi": "Rijkswaterstaat açık veri (ücretsiz anahtar) / Schiphol kameraları",
+      "lisans_durumu": "doğrulanmadı (RWS veri lisansı kontrol edilecek)",
+      "olcum": "7.277 eşzamanlı izleyici (Schiphol kalkış kamerası, 61.000 abone), 6/10 canlı sonuç",
+      "risk": "Havalimanı/liman kameraları özel işletmeci → izin süreci uzun",
+      "sonraki_adim": "RWS açık veri anahtarı al (ücretsiz), kamera veri setini çek"
+    },
+    {
+      "sira": 7,
+      "sehir": "New York",
+      "ulke": "US",
+      "kamera_kaynagi": "NYSDOT 511 / EarthCam hattı (dizin)",
+      "lisans_durumu": "doğrulanmadı; EarthCam içeriği lisanslı (ücretli)",
+      "olcum": "2.599 eşzamanlı izleyici (araç içi sokak kamerası), 10/10 canlı sonuç",
+      "risk": "ABD'de açık veri kameraları çoğunlukla havalimanı/otoyol; manzara izinleri ticari (EarthCam)",
+      "sonraki_adim": "511NY API anahtarı (ücretsiz) + lisans metni incele"
+    },
+    {
+      "sira": 8,
+      "sehir": "Tokyo",
+      "ulke": "JP",
+      "kamera_kaynagi": "JARTIC / belediye kameraları (deprem kameraları yaygın)",
+      "lisans_durumu": "doğrulanmadı",
+      "olcum": "752 eşzamanlı izleyici (deprem kamerası), 10/10 canlı sonuç",
+      "risk": "Ekosistem doygun; turizm manzarası için izinli kaynak bulmak zor",
+      "sonraki_adim": "JARTIC lisans koşullarını oku (ticari kullanım kısıtlı olabilir)"
+    },
+    {
+      "sira": 9,
+      "sehir": "Hong Kong",
+      "ulke": "HK",
+      "kamera_kaynagi": "HK Transport Department / havalimanı (doğrulanacak)",
+      "lisans_durumu": "doğrulanmadı",
+      "olcum": "1.408 eşzamanlı izleyici (havalimanı), 6/10 canlı sonuç",
+      "risk": "Havalimanı kameraları işletmeci lisanslı; skyline için ayrı izin",
+      "sonraki_adim": "gov.hk açık veri portalında 'traffic camera' veri seti ara"
+    },
+    {
+      "sira": 10,
+      "sehir": "Zurich",
+      "ulke": "CH",
+      "kamera_kaynagi": "Özel/otel kameraları (metacube vb.)",
+      "lisans_durumu": "doğrulanmadı; özel mülk kameraları → sahibinden izin",
+      "olcum": "96 eşzamanlı izleyici, 11 aboneli kanal — düşük talep ama düşük rekabet",
+      "risk": "Talep zayıf; niş kanal olarak denenebilir",
+      "sonraki_adim": "Kamera sahibiyle iletişim (B sınıfı izin yolu) test et"
+    }
+  ],
+  "elenenler": [
+    "Insecam ve 'korumasız kamera' dizinleri: yasa dışı/izinsiz — hiç listelenmedi.",
+    "Özel güvenlik kameraları, pencere içi ve yakın plan yüz içeren kameralar: mahremiyet politikası gereği baştan elendi.",
+    "SkylineWebcams / VisioRay: ToS 'çoğaltma, yeniden yayın, video/montaj oluşturma' yasak diyor → C sınıfı (ticari lisans görüşmesi mümkün).",
+    "EarthCam / webcamtaxi: içerik sahibi/operatör lisansı; dizin sitesi izin vermez → C sınıfı.",
+    "YouTube'daki diğer canlı kamera kanalları: restream ToS ihlali → C sınıfı (yayıncı ile anlaşma B yoludur)."
+  ]
+}

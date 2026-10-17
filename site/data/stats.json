@@ -1,0 +1,32 @@
+{
+ "kamera": 3804,
+ "sehir": 7,
+ "kaynaklar": [
+  {
+   "src": "digitraffic",
+   "n": 2279,
+   "a": 2279
+  },
+  {
+   "src": "tfl_jamcam",
+   "n": 890,
+   "a": 890
+  },
+  {
+   "src": "ibb_tkm",
+   "n": 635,
+   "a": 0
+  }
+ ],
+ "tip_dagilimi": {
+  "diger": 3488,
+  "trafik": 113,
+  "skyline": 74,
+  "kopru": 50,
+  "tren": 23,
+  "sahil": 23,
+  "hava": 17,
+  "meydan": 16
+ },
+ "eksik_uptime_ornegi": 0
+}

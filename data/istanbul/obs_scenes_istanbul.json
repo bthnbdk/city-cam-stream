@@ -1,0 +1,809 @@
+{
+  "current_program_scene": "Istanbul · Tam Kamera",
+  "current_scene": "Istanbul · Tam Kamera",
+  "current_transition": "Fade",
+  "groups": [],
+  "modules": {},
+  "name": "Istanbul_LiveCam_Template",
+  "preview_locked": false,
+  "quick_transitions": [],
+  "scene_order": [
+    {
+      "name": "Istanbul · Tam Kamera"
+    },
+    {
+      "name": "Istanbul · PiP (Ana+Köşe)"
+    },
+    {
+      "name": "Istanbul · 2x2 Grid"
+    },
+    {
+      "name": "STANDBY"
+    }
+  ],
+  "sources": [
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "ffmpeg_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "CAM1_S._YOLU_ATAKÖY_1",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "buffering_mb": 8,
+        "clear_on_media_end": false,
+        "close_when_inactive": false,
+        "hw_decode": true,
+        "input": "https://hls.ibb.gov.tr/tkm1/hls/8.stream/playlist.m3u8",
+        "input_format": "",
+        "is_local_file": false,
+        "looping": true,
+        "reconnect_delay_sec": 8,
+        "restart_on_activate": true,
+        "shutdown": false
+      },
+      "sync": 0,
+      "versioned_id": "ffmpeg_source",
+      "volume": 1.0,
+      "_hermes_meta": {
+        "external_id": "8",
+        "kind": "hls",
+        "licence_class": "C",
+        "onayli": false,
+        "note": "onayli=false ise bu kaynak YAYINA ALINAMAZ"
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "ffmpeg_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "CAM2_ATATÜRK_HAVALİMANI",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "buffering_mb": 8,
+        "clear_on_media_end": false,
+        "close_when_inactive": false,
+        "hw_decode": true,
+        "input": "https://hls.ibb.gov.tr/tkm1/hls/13.stream/playlist.m3u8",
+        "input_format": "",
+        "is_local_file": false,
+        "looping": true,
+        "reconnect_delay_sec": 8,
+        "restart_on_activate": true,
+        "shutdown": false
+      },
+      "sync": 0,
+      "versioned_id": "ffmpeg_source",
+      "volume": 1.0,
+      "_hermes_meta": {
+        "external_id": "13",
+        "kind": "hls",
+        "licence_class": "C",
+        "onayli": false,
+        "note": "onayli=false ise bu kaynak YAYINA ALINAMAZ"
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "ffmpeg_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "CAM3_BAKIRKÖY_İSTANBUL_",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "buffering_mb": 8,
+        "clear_on_media_end": false,
+        "close_when_inactive": false,
+        "hw_decode": true,
+        "input": "https://hls.ibb.gov.tr/tkm1/hls/27.stream/playlist.m3u8",
+        "input_format": "",
+        "is_local_file": false,
+        "looping": true,
+        "reconnect_delay_sec": 8,
+        "restart_on_activate": true,
+        "shutdown": false
+      },
+      "sync": 0,
+      "versioned_id": "ffmpeg_source",
+      "volume": 1.0,
+      "_hermes_meta": {
+        "external_id": "27",
+        "kind": "hls",
+        "licence_class": "C",
+        "onayli": false,
+        "note": "onayli=false ise bu kaynak YAYINA ALINAMAZ"
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "ffmpeg_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "CAM4_AKOM",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "buffering_mb": 8,
+        "clear_on_media_end": false,
+        "close_when_inactive": false,
+        "hw_decode": true,
+        "input": "https://hls.ibb.gov.tr/tkm4/hls/2.stream/playlist.m3u8",
+        "input_format": "",
+        "is_local_file": false,
+        "looping": true,
+        "reconnect_delay_sec": 8,
+        "restart_on_activate": true,
+        "shutdown": false
+      },
+      "sync": 0,
+      "versioned_id": "ffmpeg_source",
+      "volume": 1.0,
+      "_hermes_meta": {
+        "external_id": "2",
+        "kind": "hls",
+        "licence_class": "C",
+        "onayli": false,
+        "note": "onayli=false ise bu kaynak YAYINA ALINAMAZ"
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "browser_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": true,
+      "name": "OVR_Bar",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "css": "",
+        "fps": 30,
+        "height": 96,
+        "reroute_audio": false,
+        "shutdown": false,
+        "url": "overlays/overlay_bar.html",
+        "width": 760
+      },
+      "sync": 0,
+      "versioned_id": "browser_source",
+      "volume": 1.0,
+      "_scene_item": {
+        "pos": {
+          "x": 40,
+          "y": 940
+        },
+        "size": {
+          "x": 760,
+          "y": 96
+        },
+        "scale": 1.0,
+        "visible": true
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "browser_source",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": true,
+      "name": "OVR_Standby",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "css": "",
+        "fps": 30,
+        "height": 1080,
+        "reroute_audio": false,
+        "shutdown": false,
+        "url": "overlays/standby_card.html",
+        "width": 1920
+      },
+      "sync": 0,
+      "versioned_id": "browser_source",
+      "volume": 1.0,
+      "_scene_item": {
+        "pos": {
+          "x": 0,
+          "y": 0
+        },
+        "size": {
+          "x": 1920,
+          "y": 1080
+        },
+        "scale": 1.0,
+        "visible": true
+      }
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "scene",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "Istanbul · Tam Kamera",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "id_counter": 2,
+        "custom_size": false,
+        "items": [
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 0,
+            "locked": false,
+            "name": "CAM1_S._YOLU_ATAKÖY_1",
+            "pos": {
+              "x": 0,
+              "y": 0
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 1,
+            "locked": false,
+            "name": "OVR_Bar",
+            "pos": {
+              "x": 40,
+              "y": 940
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          }
+        ]
+      },
+      "sync": 0,
+      "versioned_id": "scene",
+      "volume": 1.0
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "scene",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "Istanbul · PiP (Ana+Köşe)",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "id_counter": 3,
+        "custom_size": false,
+        "items": [
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 0,
+            "locked": false,
+            "name": "CAM1_S._YOLU_ATAKÖY_1",
+            "pos": {
+              "x": 0,
+              "y": 0
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 1,
+            "locked": false,
+            "name": "CAM2_ATATÜRK_HAVALİMANI",
+            "pos": {
+              "x": 1440,
+              "y": 828
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 0.25,
+              "y": 0.25
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 2,
+            "locked": false,
+            "name": "OVR_Bar",
+            "pos": {
+              "x": 40,
+              "y": 940
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          }
+        ]
+      },
+      "sync": 0,
+      "versioned_id": "scene",
+      "volume": 1.0
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "scene",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "Istanbul · 2x2 Grid",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "id_counter": 5,
+        "custom_size": false,
+        "items": [
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 0,
+            "locked": false,
+            "name": "CAM1_S._YOLU_ATAKÖY_1",
+            "pos": {
+              "x": 0,
+              "y": 0
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 1,
+            "locked": false,
+            "name": "CAM2_ATATÜRK_HAVALİMANI",
+            "pos": {
+              "x": 960,
+              "y": 0
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 2,
+            "locked": false,
+            "name": "CAM3_BAKIRKÖY_İSTANBUL_",
+            "pos": {
+              "x": 0,
+              "y": 540
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 3,
+            "locked": false,
+            "name": "CAM4_AKOM",
+            "pos": {
+              "x": 960,
+              "y": 540
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 0.5,
+              "y": 0.5
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          },
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 4,
+            "locked": false,
+            "name": "OVR_Bar",
+            "pos": {
+              "x": 40,
+              "y": 940
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          }
+        ]
+      },
+      "sync": 0,
+      "versioned_id": "scene",
+      "volume": 1.0
+    },
+    {
+      "balance": 0.5,
+      "deinterlace_field_order": 0,
+      "deinterlace_mode": 0,
+      "enabled": true,
+      "flags": 0,
+      "hotkeys": {},
+      "id": "scene",
+      "mixers": 255,
+      "monitoring_type": 0,
+      "muted": false,
+      "name": "STANDBY",
+      "prev_ver": 520290000,
+      "private_settings": {},
+      "push-to-mute": false,
+      "push-to-mute-delay": 0,
+      "push-to-talk": false,
+      "push-to-talk-delay": 0,
+      "settings": {
+        "id_counter": 1,
+        "custom_size": false,
+        "items": [
+          {
+            "align": 5,
+            "blend_method": "default",
+            "blend_type": "normal",
+            "bounds": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "bounds_align": 0,
+            "bounds_type": 0,
+            "crop_bottom": 0,
+            "crop_left": 0,
+            "crop_right": 0,
+            "crop_top": 0,
+            "group_item_backup": false,
+            "hide_transition": {
+              "duration": 0
+            },
+            "id": 0,
+            "locked": false,
+            "name": "OVR_Standby",
+            "pos": {
+              "x": 0,
+              "y": 0
+            },
+            "private_settings": {},
+            "rot": 0.0,
+            "scale": {
+              "x": 1.0,
+              "y": 1.0
+            },
+            "scale_filter": "disable",
+            "show_transition": {
+              "duration": 0
+            },
+            "visible": true
+          }
+        ]
+      },
+      "sync": 0,
+      "versioned_id": "scene",
+      "volume": 1.0
+    }
+  ],
+  "transitions": [],
+  "virtual_webcam": {
+    "type": 0
+  },
+  "_hermes": {
+    "city": "istanbul",
+    "generated": "2026-10-17T15:02:25.999018+00:00",
+    "kamera_sayisi": 4,
+    "uyari": "URL'ler lisans onayi olmadan yayina alinmamalidir."
+  }
+}

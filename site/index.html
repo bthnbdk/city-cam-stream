@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>City Cam Stream — 24/7 city camera rotation player</title>
+<meta name="description" content="URL-parameterised city camera rotation player: city, rotation, mode, pool. Works as an OBS Browser Source. Licensing class is shown on every camera.">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.17/dist/hls.min.js"></script>
+</head>
+<body>
+<div id="stage">
+  <div id="tiles"></div>
+  <div id="standby" hidden>
+    <span class="dot"></span>
+    <h1 id="sb-city">City</h1>
+    <p id="sb-msg">Reconnecting…</p>
+  </div>
+  <div id="bar" hidden>
+    <span class="city" id="ov-city">City</span>
+    <span class="sep"></span>
+    <span class="clock" id="ov-clock">--:--:--</span>
+    <span class="sep"></span>
+    <span class="stack"><span class="k" id="ov-tzlabel">local time</span><span class="v" id="ov-wx">weather…</span></span>
+    <span class="sep"></span>
+    <span class="stack"><span class="k">camera</span><span class="v" id="ov-cam">—</span></span>
+    <span class="badge" id="ov-badge" hidden>A</span>
+    <span class="counter" id="ov-count">0/0</span>
+  </div>
+</div>
+
+<div id="panel" hidden>
+  <h2>Controls <span class="hint">(h)</span></h2>
+  <label>City <select id="c-city"></select></label>
+  <label>Rotation (sec) <input id="c-rot" type="number" min="1" max="600" step="1" value="5"></label>
+  <label>Layout <select id="c-mode">
+    <option value="full">Full frame</option>
+    <option value="pip">PiP (main + corner)</option>
+    <option value="grid">2x2 grid</option>
+  </select></label>
+  <label>Camera pool <select id="c-pool">
+    <option value="all">All (licence badge on)</option>
+    <option value="a">Class A only (open licence)</option>
+  </select></label>
+  <label>Max cameras <input id="c-lim" type="number" min="1" max="400" value="40"></label>
+  <label class="chk"><input id="c-overlay" type="checkbox" checked> Overlay bar</label>
+  <label class="chk"><input id="c-badge" type="checkbox" checked> Licence badge</label>
+  <label class="chk"><input id="c-sound" type="checkbox"> Sound</label>
+  <p class="help">URL parameters: <code>?city=istanbul&amp;rotation=5&amp;mode=full&amp;pool=all&amp;lim=40&amp;overlay=1&amp;badge=1&amp;sound=0</code><br>
+  Use <code>cam=12,13</code> to force specific camera ids, <code>statik=1</code> to freeze rotation,
+  <code>panel=1</code> to open this panel.<br>
+  For OBS, add this URL as a <b>Browser Source</b> (use <code>overlay=0</code> for a clean feed).<br>
+  Licensing classes: <b>A</b> open licence / permission · <b>B</b> permission pending ·
+  <b>C</b> no permission — do not broadcast. <code>pool=a</code> hides everything but class A.</p>
+</div>
+</body>
+<script src="assets/app.js"></script>
+</html>
