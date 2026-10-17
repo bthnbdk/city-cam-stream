@@ -1,0 +1,2368 @@
+{
+ "istanbul": {
+  "label": "Istanbul",
+  "country": "TR",
+  "lat": 41.013,
+  "lon": 28.978,
+  "tz": "Europe/Istanbul"
+ },
+ "ankara": {
+  "label": "Ankara",
+  "country": "TR",
+  "lat": 39.933,
+  "lon": 32.859,
+  "tz": "Europe/Istanbul"
+ },
+ "izmir": {
+  "label": "Izmir",
+  "country": "TR",
+  "lat": 38.423,
+  "lon": 27.142,
+  "tz": "Europe/Istanbul"
+ },
+ "valona": {
+  "label": "Valona",
+  "country": "Albania",
+  "lat": -19.81667,
+  "lon": 46.3,
+  "tz": "Indian/Antananarivo"
+ },
+ "mittersill": {
+  "label": "Mittersill",
+  "country": "Austria",
+  "lat": 47.28333,
+  "lon": 12.48333,
+  "tz": "Europe/Vienna"
+ },
+ "ebbs": {
+  "label": "Ebbs",
+  "country": "Austria",
+  "lat": 47.63333,
+  "lon": 12.21667,
+  "tz": "Europe/Vienna"
+ },
+ "kufstein": {
+  "label": "Kufstein",
+  "country": "Austria",
+  "lat": 47.58333,
+  "lon": 12.16667,
+  "tz": "Europe/Vienna"
+ },
+ "lermoos": {
+  "label": "Lermoos",
+  "country": "Austria",
+  "lat": 47.40358,
+  "lon": 10.8807,
+  "tz": "Europe/Vienna"
+ },
+ "bad-goisern": {
+  "label": "Bad Goisern",
+  "country": "Austria",
+  "lat": 47.64252,
+  "lon": 13.61609,
+  "tz": "Europe/Vienna"
+ },
+ "feldkirch-district": {
+  "label": "Feldkirch District",
+  "country": "Austria",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "maceio": {
+  "label": "Maceio",
+  "country": "Brazil",
+  "lat": -9.66583,
+  "lon": -35.73528,
+  "tz": "America/Maceio"
+ },
+ "cairu": {
+  "label": "Cairu",
+  "country": "Brazil",
+  "lat": -13.48694,
+  "lon": -39.04389,
+  "tz": "America/Bahia"
+ },
+ "porto-seguro": {
+  "label": "Porto Seguro",
+  "country": "Brazil",
+  "lat": -16.44972,
+  "lon": -39.06472,
+  "tz": "America/Bahia"
+ },
+ "dobrinishte": {
+  "label": "Dobrinishte",
+  "country": "Bulgaria",
+  "lat": 41.81667,
+  "lon": 23.56667,
+  "tz": "Europe/Sofia"
+ },
+ "campbell-river": {
+  "label": "Campbell River",
+  "country": "Canada",
+  "lat": 50.01634,
+  "lon": -125.24459,
+  "tz": "America/Vancouver"
+ },
+ "toronto": {
+  "label": "Toronto",
+  "country": "Canada",
+  "lat": 43.70643,
+  "lon": -79.39864,
+  "tz": "America/Toronto"
+ },
+ "torres-del-paine": {
+  "label": "Torres Del Paine",
+  "country": "Chile",
+  "lat": -50.98264,
+  "lon": -72.49877,
+  "tz": "America/Punta_Arenas"
+ },
+ "algarrobo": {
+  "label": "Algarrobo",
+  "country": "Chile",
+  "lat": 36.77388,
+  "lon": -4.03952,
+  "tz": "Europe/Madrid"
+ },
+ "moravia": {
+  "label": "Moravia",
+  "country": "Costa Rica",
+  "lat": 42.71257,
+  "lon": -76.4216,
+  "tz": "America/New_York"
+ },
+ "baden-baden": {
+  "label": "Baden Baden",
+  "country": "Germany",
+  "lat": 48.7606,
+  "lon": 8.23975,
+  "tz": "Europe/Berlin"
+ },
+ "grainau": {
+  "label": "Grainau",
+  "country": "Germany",
+  "lat": 47.47614,
+  "lon": 11.02405,
+  "tz": "Europe/Berlin"
+ },
+ "kochel-am-see": {
+  "label": "Kochel Am See",
+  "country": "Germany",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "goslar": {
+  "label": "Goslar",
+  "country": "Germany",
+  "lat": 51.90425,
+  "lon": 10.42766,
+  "tz": "Europe/Berlin"
+ },
+ "mirow": {
+  "label": "Mirow",
+  "country": "Germany",
+  "lat": 51.1972,
+  "lon": 21.0329,
+  "tz": "Europe/Warsaw"
+ },
+ "aachen": {
+  "label": "Aachen",
+  "country": "Germany",
+  "lat": 50.77664,
+  "lon": 6.08342,
+  "tz": "Europe/Berlin"
+ },
+ "cologne": {
+  "label": "Cologne",
+  "country": "Germany",
+  "lat": 50.93333,
+  "lon": 6.95,
+  "tz": "Europe/Berlin"
+ },
+ "naumburg": {
+  "label": "Naumburg",
+  "country": "Germany",
+  "lat": 51.14987,
+  "lon": 11.80979,
+  "tz": "Europe/Berlin"
+ },
+ "bani": {
+  "label": "Bani",
+  "country": "Dominican Republic",
+  "lat": 18.27971,
+  "lon": -70.33181,
+  "tz": "America/Santo_Domingo"
+ },
+ "cabarete": {
+  "label": "Cabarete",
+  "country": "Dominican Republic",
+  "lat": 19.74982,
+  "lon": -70.40829,
+  "tz": "America/Santo_Domingo"
+ },
+ "playas": {
+  "label": "Playas",
+  "country": "Ecuador",
+  "lat": 31.91676,
+  "lon": -108.53366,
+  "tz": "America/Denver"
+ },
+ "santa-elena": {
+  "label": "Santa Elena",
+  "country": "Ecuador",
+  "lat": -2.22652,
+  "lon": -80.85807,
+  "tz": "America/Guayaquil"
+ },
+ "athina": {
+  "label": "Athens",
+  "country": "Greece",
+  "lat": 37.98376,
+  "lon": 23.72784,
+  "tz": "Europe/Athens"
+ },
+ "piraeus": {
+  "label": "Piraeus",
+  "country": "Greece",
+  "lat": 37.94203,
+  "lon": 23.64619,
+  "tz": "Europe/Athens"
+ },
+ "phocis": {
+  "label": "Phocis",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "chania": {
+  "label": "Chania",
+  "country": "Greece",
+  "lat": 35.51124,
+  "lon": 24.02921,
+  "tz": "Europe/Athens"
+ },
+ "heraklion": {
+  "label": "Heraklion",
+  "country": "Greece",
+  "lat": 35.32787,
+  "lon": 25.14341,
+  "tz": "Europe/Athens"
+ },
+ "lasithi": {
+  "label": "Lasithi",
+  "country": "Greece",
+  "lat": 35.17837,
+  "lon": 25.51997,
+  "tz": "Europe/Athens"
+ },
+ "rethymno": {
+  "label": "Rethymno",
+  "country": "Greece",
+  "lat": 35.36555,
+  "lon": 24.48232,
+  "tz": "Europe/Athens"
+ },
+ "thasos": {
+  "label": "Thasos",
+  "country": "Greece",
+  "lat": 40.77806,
+  "lon": 24.70944,
+  "tz": "Europe/Athens"
+ },
+ "preveza": {
+  "label": "Preveza",
+  "country": "Greece",
+  "lat": 38.95617,
+  "lon": 20.7505,
+  "tz": "Europe/Athens"
+ },
+ "corfu": {
+  "label": "Corfu",
+  "country": "Greece",
+  "lat": 39.62441,
+  "lon": 19.92016,
+  "tz": "Europe/Athens"
+ },
+ "ithaca": {
+  "label": "Ithaca",
+  "country": "Greece",
+  "lat": 42.44063,
+  "lon": -76.49661,
+  "tz": "America/New_York"
+ },
+ "kefalonia": {
+  "label": "Kefalonia",
+  "country": "Greece",
+  "lat": 38.12227,
+  "lon": 20.50246,
+  "tz": "Europe/Athens"
+ },
+ "pella": {
+  "label": "Pella",
+  "country": "Greece",
+  "lat": 41.40805,
+  "lon": -92.91631,
+  "tz": "America/Chicago"
+ },
+ "veria": {
+  "label": "Veria",
+  "country": "Greece",
+  "lat": 46.45093,
+  "lon": 5.42261,
+  "tz": "Europe/Paris"
+ },
+ "karyes": {
+  "label": "Karyes",
+  "country": "Greece",
+  "lat": 40.25715,
+  "lon": 24.24498,
+  "tz": "Europe/Athens"
+ },
+ "dodecanisa": {
+  "label": "Dodecanisa",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "kyklades": {
+  "label": "Kyklades",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "lesbos": {
+  "label": "Lesbos",
+  "country": "Greece",
+  "lat": 39.20353,
+  "lon": 26.27655,
+  "tz": "Europe/Athens"
+ },
+ "arcadia": {
+  "label": "Arcadia",
+  "country": "Greece",
+  "lat": 27.21588,
+  "lon": -81.85842,
+  "tz": "America/New_York"
+ },
+ "argolis": {
+  "label": "Argolis",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "sparta": {
+  "label": "Sparta",
+  "country": "Greece",
+  "lat": 43.94413,
+  "lon": -90.81291,
+  "tz": "America/Chicago"
+ },
+ "sporades": {
+  "label": "Sporades",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "trikala": {
+  "label": "Trikala",
+  "country": "Greece",
+  "lat": 39.55493,
+  "lon": 21.76837,
+  "tz": "Europe/Athens"
+ },
+ "almeria": {
+  "label": "Almeria",
+  "country": "Spain",
+  "lat": 36.83814,
+  "lon": -2.45974,
+  "tz": "Europe/Madrid"
+ },
+ "cadiz": {
+  "label": "Cadiz",
+  "country": "Spain",
+  "lat": 36.52672,
+  "lon": -6.2891,
+  "tz": "Europe/Madrid"
+ },
+ "granada": {
+  "label": "Granada",
+  "country": "Spain",
+  "lat": 37.18817,
+  "lon": -3.60667,
+  "tz": "Europe/Madrid"
+ },
+ "huelva": {
+  "label": "Huelva",
+  "country": "Spain",
+  "lat": 37.26638,
+  "lon": -6.94004,
+  "tz": "Europe/Madrid"
+ },
+ "malaga": {
+  "label": "Malaga",
+  "country": "Spain",
+  "lat": 36.72016,
+  "lon": -4.42034,
+  "tz": "Europe/Madrid"
+ },
+ "sevilla": {
+  "label": "Seville",
+  "country": "Spain",
+  "lat": 37.38283,
+  "lon": -5.97317,
+  "tz": "Europe/Madrid"
+ },
+ "somiedo": {
+  "label": "Somiedo",
+  "country": "Spain",
+  "lat": 43.0929,
+  "lon": -6.25629,
+  "tz": "Europe/Madrid"
+ },
+ "las-palmas-gran-canaria": {
+  "label": "Las Palmas Gran Canaria",
+  "country": "Spain",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "las-palmas": {
+  "label": "Las Palmas",
+  "country": "Spain",
+  "lat": 28.10178,
+  "lon": -15.41573,
+  "tz": "Atlantic/Canary"
+ },
+ "santa-cruz-de-tenerife": {
+  "label": "Santa Cruz De Tenerife",
+  "country": "Spain",
+  "lat": 28.46824,
+  "lon": -16.25462,
+  "tz": "Atlantic/Canary"
+ },
+ "santillana-del-mar": {
+  "label": "Santillana Del Mar",
+  "country": "Spain",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "suances": {
+  "label": "Suances",
+  "country": "Spain",
+  "lat": 43.43341,
+  "lon": -4.04338,
+  "tz": "Europe/Madrid"
+ },
+ "toledo": {
+  "label": "Toledo",
+  "country": "Spain",
+  "lat": 41.66394,
+  "lon": -83.55521,
+  "tz": "America/New_York"
+ },
+ "sant-julia-de-vilatorta": {
+  "label": "Sant Julia De Vilatorta",
+  "country": "Spain",
+  "lat": 41.92189,
+  "lon": 2.32447,
+  "tz": "Europe/Madrid"
+ },
+ "tarragona": {
+  "label": "Tarragona",
+  "country": "Spain",
+  "lat": 41.11905,
+  "lon": 1.24544,
+  "tz": "Europe/Madrid"
+ },
+ "madrid": {
+  "label": "Madrid",
+  "country": "Spain",
+  "lat": 40.4165,
+  "lon": -3.70256,
+  "tz": "Europe/Madrid"
+ },
+ "alicante": {
+  "label": "Alicante",
+  "country": "Spain",
+  "lat": 38.34517,
+  "lon": -0.48149,
+  "tz": "Europe/Madrid"
+ },
+ "castellon": {
+  "label": "Castellon",
+  "country": "Spain",
+  "lat": 39.98567,
+  "lon": -0.04935,
+  "tz": "Europe/Madrid"
+ },
+ "santa-pola": {
+  "label": "Santa Pola",
+  "country": "Spain",
+  "lat": 38.19165,
+  "lon": -0.5658,
+  "tz": "Europe/Madrid"
+ },
+ "ibiza": {
+  "label": "Ibiza",
+  "country": "Spain",
+  "lat": 38.90883,
+  "lon": 1.43296,
+  "tz": "Europe/Madrid"
+ },
+ "mallorca": {
+  "label": "Mallorca",
+  "country": "Spain",
+  "lat": 39.6078,
+  "lon": 3.01197,
+  "tz": "Europe/Madrid"
+ },
+ "murcia": {
+  "label": "Murcia",
+  "country": "Spain",
+  "lat": 37.98704,
+  "lon": -1.13004,
+  "tz": "Europe/Madrid"
+ },
+ "arbusigny": {
+  "label": "Arbusigny",
+  "country": "France",
+  "lat": 46.09316,
+  "lon": 6.21859,
+  "tz": "Europe/Paris"
+ },
+ "saint-pierre-d-oleron": {
+  "label": "Saint Pierre D Oleron",
+  "country": "France",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "medulin": {
+  "label": "Medulin",
+  "country": "Croatia",
+  "lat": 44.8225,
+  "lon": 13.935,
+  "tz": "Europe/Zagreb"
+ },
+ "zadar": {
+  "label": "Zadar",
+  "country": "Croatia",
+  "lat": 44.11578,
+  "lon": 15.22514,
+  "tz": "Europe/Zagreb"
+ },
+ "tihany": {
+  "label": "Tihany",
+  "country": "Hungary",
+  "lat": 46.91369,
+  "lon": 17.88918,
+  "tz": "Europe/Budapest"
+ },
+ "chieti": {
+  "label": "Chieti",
+  "country": "Italy",
+  "lat": 42.34827,
+  "lon": 14.16494,
+  "tz": "Europe/Rome"
+ },
+ "laquila": {
+  "label": "Laquila",
+  "country": "Italy",
+  "lat": -12.09667,
+  "lon": -75.54333,
+  "tz": "America/Lima"
+ },
+ "pescara": {
+  "label": "Pescara",
+  "country": "Italy",
+  "lat": 42.4584,
+  "lon": 14.20283,
+  "tz": "Europe/Rome"
+ },
+ "teramo": {
+  "label": "Teramo",
+  "country": "Italy",
+  "lat": 42.66123,
+  "lon": 13.69901,
+  "tz": "Europe/Rome"
+ },
+ "potenza": {
+  "label": "Potenza",
+  "country": "Italy",
+  "lat": 40.64175,
+  "lon": 15.80794,
+  "tz": "Europe/Rome"
+ },
+ "catanzaro": {
+  "label": "Catanzaro",
+  "country": "Italy",
+  "lat": 38.88247,
+  "lon": 16.60086,
+  "tz": "Europe/Rome"
+ },
+ "cosenza": {
+  "label": "Cosenza",
+  "country": "Italy",
+  "lat": 39.2989,
+  "lon": 16.25307,
+  "tz": "Europe/Rome"
+ },
+ "crotone": {
+  "label": "Crotone",
+  "country": "Italy",
+  "lat": 39.08077,
+  "lon": 17.12764,
+  "tz": "Europe/Rome"
+ },
+ "reggio-calabria": {
+  "label": "Reggio Calabria",
+  "country": "Italy",
+  "lat": 38.11047,
+  "lon": 15.66129,
+  "tz": "Europe/Rome"
+ },
+ "vibo-valentia": {
+  "label": "Vibo Valentia",
+  "country": "Italy",
+  "lat": 38.67618,
+  "lon": 16.10094,
+  "tz": "Europe/Rome"
+ },
+ "avellino": {
+  "label": "Avellino",
+  "country": "Italy",
+  "lat": 40.91494,
+  "lon": 14.79103,
+  "tz": "Europe/Rome"
+ },
+ "benevento": {
+  "label": "Benevento",
+  "country": "Italy",
+  "lat": 41.1307,
+  "lon": 14.77816,
+  "tz": "Europe/Rome"
+ },
+ "napoli": {
+  "label": "Naples",
+  "country": "Italy",
+  "lat": 40.85216,
+  "lon": 14.26811,
+  "tz": "Europe/Rome"
+ },
+ "salerno": {
+  "label": "Salerno",
+  "country": "Italy",
+  "lat": 40.67545,
+  "lon": 14.79328,
+  "tz": "Europe/Rome"
+ },
+ "bologna": {
+  "label": "Bologna",
+  "country": "Italy",
+  "lat": 44.49381,
+  "lon": 11.33875,
+  "tz": "Europe/Rome"
+ },
+ "ferrara": {
+  "label": "Ferrara",
+  "country": "Italy",
+  "lat": 44.83804,
+  "lon": 11.62057,
+  "tz": "Europe/Rome"
+ },
+ "parma": {
+  "label": "Parma",
+  "country": "Italy",
+  "lat": 44.79935,
+  "lon": 10.32618,
+  "tz": "Europe/Rome"
+ },
+ "ravenna": {
+  "label": "Ravenna",
+  "country": "Italy",
+  "lat": 44.41344,
+  "lon": 12.20121,
+  "tz": "Europe/Rome"
+ },
+ "reggio-emilia": {
+  "label": "Reggio Emilia",
+  "country": "Italy",
+  "lat": 44.69825,
+  "lon": 10.63125,
+  "tz": "Europe/Rome"
+ },
+ "rimini": {
+  "label": "Rimini",
+  "country": "Italy",
+  "lat": 44.05755,
+  "lon": 12.56528,
+  "tz": "Europe/Rome"
+ },
+ "trieste": {
+  "label": "Trieste",
+  "country": "Italy",
+  "lat": 45.64953,
+  "lon": 13.77678,
+  "tz": "Europe/Rome"
+ },
+ "udine": {
+  "label": "Udine",
+  "country": "Italy",
+  "lat": 46.0693,
+  "lon": 13.23715,
+  "tz": "Europe/Rome"
+ },
+ "frosinone": {
+  "label": "Frosinone",
+  "country": "Italy",
+  "lat": 41.63976,
+  "lon": 13.34109,
+  "tz": "Europe/Rome"
+ },
+ "latina": {
+  "label": "Latina",
+  "country": "Italy",
+  "lat": 40.38897,
+  "lon": -3.74569,
+  "tz": "Europe/Madrid"
+ },
+ "rieti": {
+  "label": "Rieti",
+  "country": "Italy",
+  "lat": 42.40476,
+  "lon": 12.85735,
+  "tz": "Europe/Rome"
+ },
+ "roma": {
+  "label": "Rome",
+  "country": "Italy",
+  "lat": 41.89193,
+  "lon": 12.51133,
+  "tz": "Europe/Rome"
+ },
+ "genova": {
+  "label": "Genoa",
+  "country": "Italy",
+  "lat": 44.40478,
+  "lon": 8.94439,
+  "tz": "Europe/Rome"
+ },
+ "imperia": {
+  "label": "Imperia",
+  "country": "Italy",
+  "lat": 43.88917,
+  "lon": 8.03933,
+  "tz": "Europe/Rome"
+ },
+ "la-spezia": {
+  "label": "La Spezia",
+  "country": "Italy",
+  "lat": 44.103,
+  "lon": 9.82375,
+  "tz": "Europe/Rome"
+ },
+ "savona": {
+  "label": "Savona",
+  "country": "Italy",
+  "lat": 44.30905,
+  "lon": 8.47715,
+  "tz": "Europe/Rome"
+ },
+ "bergamo": {
+  "label": "Bergamo",
+  "country": "Italy",
+  "lat": 45.69601,
+  "lon": 9.66721,
+  "tz": "Europe/Rome"
+ },
+ "brescia": {
+  "label": "Brescia",
+  "country": "Italy",
+  "lat": 45.53558,
+  "lon": 10.21472,
+  "tz": "Europe/Rome"
+ },
+ "como": {
+  "label": "Como",
+  "country": "Italy",
+  "lat": 45.80819,
+  "lon": 9.0832,
+  "tz": "Europe/Rome"
+ },
+ "milano": {
+  "label": "Milan",
+  "country": "Italy",
+  "lat": 45.46427,
+  "lon": 9.18951,
+  "tz": "Europe/Rome"
+ },
+ "monza-e-brianza": {
+  "label": "Monza E Brianza",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "sondrio": {
+  "label": "Sondrio",
+  "country": "Italy",
+  "lat": 46.16852,
+  "lon": 9.87134,
+  "tz": "Europe/Rome"
+ },
+ "varese": {
+  "label": "Varese",
+  "country": "Italy",
+  "lat": 45.82058,
+  "lon": 8.82511,
+  "tz": "Europe/Rome"
+ },
+ "ancona": {
+  "label": "Ancona",
+  "country": "Italy",
+  "lat": 43.60717,
+  "lon": 13.5103,
+  "tz": "Europe/Rome"
+ },
+ "macerata": {
+  "label": "Macerata",
+  "country": "Italy",
+  "lat": 43.29789,
+  "lon": 13.45293,
+  "tz": "Europe/Rome"
+ },
+ "pesaro-urbino": {
+  "label": "Pesaro Urbino",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "campobasso": {
+  "label": "Campobasso",
+  "country": "Italy",
+  "lat": 41.55947,
+  "lon": 14.66737,
+  "tz": "Europe/Rome"
+ },
+ "cuneo": {
+  "label": "Cuneo",
+  "country": "Italy",
+  "lat": 44.39071,
+  "lon": 7.54828,
+  "tz": "Europe/Rome"
+ },
+ "torino": {
+  "label": "Turin",
+  "country": "Italy",
+  "lat": 45.07049,
+  "lon": 7.68682,
+  "tz": "Europe/Rome"
+ },
+ "verbania": {
+  "label": "Verbania",
+  "country": "Italy",
+  "lat": 45.92136,
+  "lon": 8.55183,
+  "tz": "Europe/Rome"
+ },
+ "bari": {
+  "label": "Bari",
+  "country": "Italy",
+  "lat": 41.12066,
+  "lon": 16.86982,
+  "tz": "Europe/Rome"
+ },
+ "foggia": {
+  "label": "Foggia",
+  "country": "Italy",
+  "lat": 41.45845,
+  "lon": 15.55188,
+  "tz": "Europe/Rome"
+ },
+ "lecce": {
+  "label": "Lecce",
+  "country": "Italy",
+  "lat": 40.35481,
+  "lon": 18.17244,
+  "tz": "Europe/Rome"
+ },
+ "sassari": {
+  "label": "Sassari",
+  "country": "Italy",
+  "lat": 40.72586,
+  "lon": 8.55552,
+  "tz": "Europe/Rome"
+ },
+ "caltanissetta": {
+  "label": "Caltanissetta",
+  "country": "Italy",
+  "lat": 37.49025,
+  "lon": 14.06216,
+  "tz": "Europe/Rome"
+ },
+ "catania": {
+  "label": "Catania",
+  "country": "Italy",
+  "lat": 37.49223,
+  "lon": 15.07041,
+  "tz": "Europe/Rome"
+ },
+ "enna": {
+  "label": "Enna",
+  "country": "Italy",
+  "lat": 37.5655,
+  "lon": 14.27433,
+  "tz": "Europe/Rome"
+ },
+ "messina": {
+  "label": "Messina",
+  "country": "Italy",
+  "lat": 38.19394,
+  "lon": 15.55256,
+  "tz": "Europe/Rome"
+ },
+ "palermo": {
+  "label": "Palermo",
+  "country": "Italy",
+  "lat": 38.1166,
+  "lon": 13.3636,
+  "tz": "Europe/Rome"
+ },
+ "ragusa": {
+  "label": "Ragusa",
+  "country": "Italy",
+  "lat": 36.92574,
+  "lon": 14.72443,
+  "tz": "Europe/Rome"
+ },
+ "siracusa": {
+  "label": "Siracusa",
+  "country": "Italy",
+  "lat": 37.07542,
+  "lon": 15.28664,
+  "tz": "Europe/Rome"
+ },
+ "trapani": {
+  "label": "Trapani",
+  "country": "Italy",
+  "lat": 38.0176,
+  "lon": 12.53617,
+  "tz": "Europe/Rome"
+ },
+ "firenze": {
+  "label": "Florence",
+  "country": "Italy",
+  "lat": 43.77925,
+  "lon": 11.24626,
+  "tz": "Europe/Rome"
+ },
+ "grosseto": {
+  "label": "Grosseto",
+  "country": "Italy",
+  "lat": 42.76296,
+  "lon": 11.10941,
+  "tz": "Europe/Rome"
+ },
+ "isola-elba": {
+  "label": "Isola Elba",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "livorno": {
+  "label": "Livorno",
+  "country": "Italy",
+  "lat": 43.54427,
+  "lon": 10.32615,
+  "tz": "Europe/Rome"
+ },
+ "lucca": {
+  "label": "Lucca",
+  "country": "Italy",
+  "lat": 43.84369,
+  "lon": 10.50447,
+  "tz": "Europe/Rome"
+ },
+ "massa-carrara": {
+  "label": "Massa Carrara",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "pisa": {
+  "label": "Pisa",
+  "country": "Italy",
+  "lat": 43.70853,
+  "lon": 10.4036,
+  "tz": "Europe/Rome"
+ },
+ "pistoia": {
+  "label": "Pistoia",
+  "country": "Italy",
+  "lat": 43.93064,
+  "lon": 10.92365,
+  "tz": "Europe/Rome"
+ },
+ "bolzano": {
+  "label": "Bolzano",
+  "country": "Italy",
+  "lat": 46.49067,
+  "lon": 11.33982,
+  "tz": "Europe/Rome"
+ },
+ "trento": {
+  "label": "Trento",
+  "country": "Italy",
+  "lat": 46.06787,
+  "lon": 11.12108,
+  "tz": "Europe/Rome"
+ },
+ "perugia": {
+  "label": "Perugia",
+  "country": "Italy",
+  "lat": 43.1122,
+  "lon": 12.38878,
+  "tz": "Europe/Rome"
+ },
+ "aosta": {
+  "label": "Aosta",
+  "country": "Italy",
+  "lat": 45.73764,
+  "lon": 7.31722,
+  "tz": "Europe/Rome"
+ },
+ "belluno": {
+  "label": "Belluno",
+  "country": "Italy",
+  "lat": 46.14262,
+  "lon": 12.2156,
+  "tz": "Europe/Rome"
+ },
+ "padova": {
+  "label": "Padova",
+  "country": "Italy",
+  "lat": 44.38225,
+  "lon": 11.14261,
+  "tz": "Europe/Rome"
+ },
+ "venezia": {
+  "label": "Venice",
+  "country": "Italy",
+  "lat": 39.75895,
+  "lon": -84.19161,
+  "tz": "America/New_York"
+ },
+ "verona": {
+  "label": "Verona",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "vicenza": {
+  "label": "Vicenza",
+  "country": "Italy",
+  "lat": 45.54672,
+  "lon": 11.5475,
+  "tz": "Europe/Rome"
+ },
+ "amman": {
+  "label": "Amman",
+  "country": "Jordan",
+  "lat": 31.95522,
+  "lon": 35.94503,
+  "tz": "Asia/Amman"
+ },
+ "kudafolhudhoo": {
+  "label": "Kudafolhudhoo",
+  "country": "Maldives",
+  "lat": 4.18122,
+  "lon": 72.76711,
+  "tz": "Indian/Maldives"
+ },
+ "male": {
+  "label": "Male",
+  "country": "Maldives",
+  "lat": 4.17521,
+  "lon": 73.50916,
+  "tz": "Indian/Maldives"
+ },
+ "dhonakulhi-island": {
+  "label": "Dhonakulhi Island",
+  "country": "Maldives",
+  "lat": 6.84612,
+  "lon": 73.05063,
+  "tz": "Indian/Maldives"
+ },
+ "upper-north-province": {
+  "label": "Upper North Province",
+  "country": "Maldives",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "gharb": {
+  "label": "Gharb",
+  "country": "Malta",
+  "lat": 36.05966,
+  "lon": 14.20917,
+  "tz": "Europe/Malta"
+ },
+ "birzebbuga": {
+  "label": "Birzebbuga",
+  "country": "Malta",
+  "lat": 35.82546,
+  "lon": 14.52685,
+  "tz": "Europe/Malta"
+ },
+ "cirkewwa": {
+  "label": "Cirkewwa",
+  "country": "Malta",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "floriana": {
+  "label": "Floriana",
+  "country": "Malta",
+  "lat": 35.89583,
+  "lon": 14.50833,
+  "tz": "Europe/Malta"
+ },
+ "gzira": {
+  "label": "Gzira",
+  "country": "Malta",
+  "lat": 35.90583,
+  "lon": 14.48806,
+  "tz": "Europe/Malta"
+ },
+ "mosta": {
+  "label": "Mosta",
+  "country": "Malta",
+  "lat": 35.90942,
+  "lon": 14.42566,
+  "tz": "Europe/Malta"
+ },
+ "naxxar": {
+  "label": "Naxxar",
+  "country": "Malta",
+  "lat": 35.91368,
+  "lon": 14.44382,
+  "tz": "Europe/Malta"
+ },
+ "qrendi": {
+  "label": "Qrendi",
+  "country": "Malta",
+  "lat": 35.83446,
+  "lon": 14.45783,
+  "tz": "Europe/Malta"
+ },
+ "st-julians": {
+  "label": "St Julians",
+  "country": "Malta",
+  "lat": 51.74048,
+  "lon": -0.35068,
+  "tz": "Europe/London"
+ },
+ "traffic": {
+  "label": "Traffic",
+  "country": "Malta",
+  "lat": 45.81508,
+  "lon": 9.76123,
+  "tz": "Europe/Rome"
+ },
+ "valletta": {
+  "label": "Valletta",
+  "country": "Malta",
+  "lat": 35.89968,
+  "lon": 14.5148,
+  "tz": "Europe/Malta"
+ },
+ "xemxija": {
+  "label": "Xemxija",
+  "country": "Malta",
+  "lat": 35.94959,
+  "lon": 14.38033,
+  "tz": "Europe/Malta"
+ },
+ "cabo-san-lucas": {
+  "label": "Cabo San Lucas",
+  "country": "Mexico",
+  "lat": 22.89088,
+  "lon": -109.91238,
+  "tz": "America/Mazatlan"
+ },
+ "durres": {
+  "label": "Durres",
+  "country": "Albania",
+  "lat": 41.32355,
+  "lon": 19.45469,
+  "tz": "Europe/Tirane"
+ },
+ "san-rafael": {
+  "label": "San Rafael",
+  "country": "Argentina",
+  "lat": -34.61531,
+  "lon": -68.33238,
+  "tz": "America/Argentina/Mendoza"
+ },
+ "sydney": {
+  "label": "Sydney",
+  "country": "Australia",
+  "lat": -33.86785,
+  "lon": 151.20732,
+  "tz": "Australia/Sydney"
+ },
+ "radstadt": {
+  "label": "Radstadt",
+  "country": "Austria",
+  "lat": 47.38333,
+  "lon": 13.45,
+  "tz": "Europe/Vienna"
+ },
+ "silver-sands": {
+  "label": "Silver Sands",
+  "country": "Barbados",
+  "lat": -34.36922,
+  "lon": 18.8916,
+  "tz": "Africa/Johannesburg"
+ },
+ "copacabana": {
+  "label": "Copacabana",
+  "country": "Bolivia",
+  "lat": -22.96898,
+  "lon": -43.18563,
+  "tz": "America/Sao_Paulo"
+ },
+ "cambara-do-sul": {
+  "label": "Cambara Do Sul",
+  "country": "Brazil",
+  "lat": -29.04758,
+  "lon": -50.14302,
+  "tz": "America/Sao_Paulo"
+ },
+ "boa-vista": {
+  "label": "Boa Vista",
+  "country": "Cabo Verde",
+  "lat": 2.81972,
+  "lon": -60.67333,
+  "tz": "America/Boa_Vista"
+ },
+ "punta-arenas": {
+  "label": "Punta Arenas",
+  "country": "Chile",
+  "lat": -53.16282,
+  "lon": -70.90922,
+  "tz": "America/Punta_Arenas"
+ },
+ "puntarenas": {
+  "label": "Puntarenas",
+  "country": "Costa Rica",
+  "lat": 9.97691,
+  "lon": -84.8379,
+  "tz": "America/Costa_Rica"
+ },
+ "larnaca": {
+  "label": "Larnaca",
+  "country": "Cyprus",
+  "lat": 34.9221,
+  "lon": 33.62794,
+  "tz": "Asia/Nicosia"
+ },
+ "prague": {
+  "label": "Prague",
+  "country": "Czechia",
+  "lat": 50.08804,
+  "lon": 14.42076,
+  "tz": "Europe/Prague"
+ },
+ "oberharz-am-brocken": {
+  "label": "Oberharz Am Brocken",
+  "country": "Germany",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "santa-cruz-island": {
+  "label": "Santa Cruz Island",
+  "country": "Ecuador",
+  "lat": 13.50806,
+  "lon": 122.07972,
+  "tz": "Asia/Manila"
+ },
+ "puerto-lopez": {
+  "label": "Puerto Lopez",
+  "country": "Ecuador",
+  "lat": -1.55873,
+  "lon": -80.80931,
+  "tz": "America/Guayaquil"
+ },
+ "salinas": {
+  "label": "Salinas",
+  "country": "Ecuador",
+  "lat": 36.67774,
+  "lon": -121.6555,
+  "tz": "America/Los_Angeles"
+ },
+ "evrytania": {
+  "label": "Evrytania",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "pieria": {
+  "label": "Pieria",
+  "country": "Greece",
+  "lat": 40.26847,
+  "lon": 22.20435,
+  "tz": "Europe/Athens"
+ },
+ "thessaloniki": {
+  "label": "Thessaloniki",
+  "country": "Greece",
+  "lat": 40.64072,
+  "lon": 22.93493,
+  "tz": "Europe/Athens"
+ },
+ "chios": {
+  "label": "Chios",
+  "country": "Greece",
+  "lat": 38.36875,
+  "lon": 26.13718,
+  "tz": "Europe/Athens"
+ },
+ "corinth": {
+  "label": "Corinth",
+  "country": "Greece",
+  "lat": 34.93425,
+  "lon": -88.52227,
+  "tz": "America/Chicago"
+ },
+ "laconia": {
+  "label": "Laconia",
+  "country": "Greece",
+  "lat": 43.52785,
+  "lon": -71.47035,
+  "tz": "America/New_York"
+ },
+ "aetolia-acarnania": {
+  "label": "Aetolia Acarnania",
+  "country": "Greece",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "corralejo": {
+  "label": "Corralejo",
+  "country": "Spain",
+  "lat": 28.73079,
+  "lon": -13.86749,
+  "tz": "Atlantic/Canary"
+ },
+ "gerona": {
+  "label": "Gerona",
+  "country": "Spain",
+  "lat": 15.6065,
+  "lon": 120.5978,
+  "tz": "Asia/Manila"
+ },
+ "biscay": {
+  "label": "Biscay",
+  "country": "Spain",
+  "lat": 44.82746,
+  "lon": -94.27498,
+  "tz": "America/Chicago"
+ },
+ "ourense": {
+  "label": "Ourense",
+  "country": "Spain",
+  "lat": 42.33669,
+  "lon": -7.86407,
+  "tz": "Europe/Madrid"
+ },
+ "formentera": {
+  "label": "Formentera",
+  "country": "Spain",
+  "lat": 38.69467,
+  "lon": 1.46919,
+  "tz": "Europe/Madrid"
+ },
+ "eystur": {
+  "label": "Eystur",
+  "country": "Faroe Islands",
+  "lat": 62.20907,
+  "lon": -6.75247,
+  "tz": "Atlantic/Faroe"
+ },
+ "marseille": {
+  "label": "Marseille",
+  "country": "France",
+  "lat": 43.29695,
+  "lon": 5.38107,
+  "tz": "Europe/Paris"
+ },
+ "springs": {
+  "label": "Springs",
+  "country": "Grenada",
+  "lat": -26.25,
+  "lon": 28.4,
+  "tz": "Africa/Johannesburg"
+ },
+ "terre-de-haut": {
+  "label": "Terre De Haut",
+  "country": "Guadeloupe",
+  "lat": 15.86656,
+  "lon": -61.5826,
+  "tz": "America/Guadeloupe"
+ },
+ "split": {
+  "label": "Split",
+  "country": "Croatia",
+  "lat": 43.50891,
+  "lon": 16.43915,
+  "tz": "Europe/Zagreb"
+ },
+ "hofn": {
+  "label": "Hofn",
+  "country": "Iceland",
+  "lat": 64.25388,
+  "lon": -15.21212,
+  "tz": "Atlantic/Reykjavik"
+ },
+ "reykjavik": {
+  "label": "Reykjavik",
+  "country": "Iceland",
+  "lat": 64.13548,
+  "lon": -21.89541,
+  "tz": "Atlantic/Reykjavik"
+ },
+ "kerry": {
+  "label": "Kerry",
+  "country": "Ireland",
+  "lat": 52.50156,
+  "lon": -3.25862,
+  "tz": "Europe/London"
+ },
+ "forli-cesena": {
+  "label": "Forli Cesena",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "viterbo": {
+  "label": "Viterbo",
+  "country": "Italy",
+  "lat": 42.41937,
+  "lon": 12.1056,
+  "tz": "Europe/Rome"
+ },
+ "lecco": {
+  "label": "Lecco",
+  "country": "Italy",
+  "lat": 45.85589,
+  "lon": 9.39704,
+  "tz": "Europe/Rome"
+ },
+ "lodi": {
+  "label": "Lodi",
+  "country": "Italy",
+  "lat": 38.1302,
+  "lon": -121.27245,
+  "tz": "America/Los_Angeles"
+ },
+ "alessandria": {
+  "label": "Alessandria",
+  "country": "Italy",
+  "lat": 44.90924,
+  "lon": 8.61007,
+  "tz": "Europe/Rome"
+ },
+ "vercelli": {
+  "label": "Vercelli",
+  "country": "Italy",
+  "lat": 45.32163,
+  "lon": 8.41989,
+  "tz": "Europe/Rome"
+ },
+ "barletta": {
+  "label": "Barletta",
+  "country": "Italy",
+  "lat": 41.31429,
+  "lon": 16.28165,
+  "tz": "Europe/Rome"
+ },
+ "cagliari": {
+  "label": "Cagliari",
+  "country": "Italy",
+  "lat": 39.23054,
+  "lon": 9.11917,
+  "tz": "Europe/Rome"
+ },
+ "olbia-tempio": {
+  "label": "Olbia Tempio",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "sud-sardegna": {
+  "label": "Sud Sardegna",
+  "country": "Italy",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "arezzo": {
+  "label": "Arezzo",
+  "country": "Italy",
+  "lat": 43.46276,
+  "lon": 11.88068,
+  "tz": "Europe/Rome"
+ },
+ "voi": {
+  "label": "Voi",
+  "country": "Kenya",
+  "lat": 8.42194,
+  "lon": -9.74778,
+  "tz": "Africa/Monrovia"
+ },
+ "maamutaa-island": {
+  "label": "Maamutaa Island",
+  "country": "Maldives",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "hanimaadhoo": {
+  "label": "Hanimaadhoo",
+  "country": "Maldives",
+  "lat": 6.76485,
+  "lon": 73.17564,
+  "tz": "Indian/Maldives"
+ },
+ "faarufushi-island": {
+  "label": "Faarufushi Island",
+  "country": "Maldives",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "birkirkara": {
+  "label": "Birkirkara",
+  "country": "Malta",
+  "lat": 35.89706,
+  "lon": 14.46115,
+  "tz": "Europe/Malta"
+ },
+ "marsaxlokk": {
+  "label": "Marsaxlokk",
+  "country": "Malta",
+  "lat": 35.84214,
+  "lon": 14.54296,
+  "tz": "Europe/Malta"
+ },
+ "mellieha": {
+  "label": "Mellieha",
+  "country": "Malta",
+  "lat": 35.95663,
+  "lon": 14.36259,
+  "tz": "Europe/Malta"
+ },
+ "sliema": {
+  "label": "Sliema",
+  "country": "Malta",
+  "lat": 35.91247,
+  "lon": 14.50175,
+  "tz": "Europe/Malta"
+ },
+ "st-paul-s-bay": {
+  "label": "St Paul S Bay",
+  "country": "Malta",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "imsouane": {
+  "label": "Imsouane",
+  "country": "Morocco",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "skjervoy": {
+  "label": "Skjervoy",
+  "country": "Norway",
+  "lat": 70.03114,
+  "lon": 20.97141,
+  "tz": "Europe/Oslo"
+ },
+ "tromso": {
+  "label": "Tromso",
+  "country": "Norway",
+  "lat": 69.6489,
+  "lon": 18.95508,
+  "tz": "Europe/Oslo"
+ },
+ "arequipa": {
+  "label": "Arequipa",
+  "country": "Peru",
+  "lat": -16.39899,
+  "lon": -71.53747,
+  "tz": "America/Lima"
+ },
+ "ascope-province": {
+  "label": "Ascope Province",
+  "country": "Peru",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "trujillo": {
+  "label": "Trujillo",
+  "country": "Peru",
+  "lat": -8.11599,
+  "lon": -79.02998,
+  "tz": "America/Lima"
+ },
+ "chiclayo": {
+  "label": "Chiclayo",
+  "country": "Peru",
+  "lat": -6.77008,
+  "lon": -79.85495,
+  "tz": "America/Lima"
+ },
+ "talara": {
+  "label": "Talara",
+  "country": "Peru",
+  "lat": -4.57722,
+  "lon": -81.27194,
+  "tz": "America/Lima"
+ },
+ "palawan": {
+  "label": "Palawan",
+  "country": "Philippines",
+  "lat": -3.06667,
+  "lon": 116.1,
+  "tz": "Asia/Makassar"
+ },
+ "krakow": {
+  "label": "Krakow",
+  "country": "Poland",
+  "lat": 50.06143,
+  "lon": 19.93658,
+  "tz": "Europe/Warsaw"
+ },
+ "nowy-targ-county": {
+  "label": "Nowy Targ County",
+  "country": "Poland",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "lodz": {
+  "label": "Lodz",
+  "country": "Poland",
+  "lat": 51.77058,
+  "lon": 19.47395,
+  "tz": "Europe/Warsaw"
+ },
+ "gdansk": {
+  "label": "Gdansk",
+  "country": "Poland",
+  "lat": 54.35227,
+  "lon": 18.64912,
+  "tz": "Europe/Warsaw"
+ },
+ "faro": {
+  "label": "Faro",
+  "country": "Portugal",
+  "lat": 37.01869,
+  "lon": -7.92716,
+  "tz": "Europe/Lisbon"
+ },
+ "san-juan": {
+  "label": "San Juan",
+  "country": "Puerto Rico",
+  "lat": 18.46633,
+  "lon": -66.10572,
+  "tz": "America/Puerto_Rico"
+ },
+ "fardea": {
+  "label": "Fardea",
+  "country": "Romania",
+  "lat": 45.73333,
+  "lon": 22.16667,
+  "tz": "Europe/Bucharest"
+ },
+ "oberland": {
+  "label": "Oberland",
+  "country": "Switzerland",
+  "lat": 47.9,
+  "lon": 14.75,
+  "tz": "Europe/Vienna"
+ },
+ "saas-fee": {
+  "label": "Saas Fee",
+  "country": "Switzerland",
+  "lat": 46.10805,
+  "lon": 7.92741,
+  "tz": "Europe/Zurich"
+ },
+ "silvaplana": {
+  "label": "Silvaplana",
+  "country": "Switzerland",
+  "lat": 46.4581,
+  "lon": 9.79514,
+  "tz": "Europe/Zurich"
+ },
+ "simpson-bay": {
+  "label": "Simpson Bay",
+  "country": "Sint Maarten",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "piran": {
+  "label": "Piran",
+  "country": "Slovenia",
+  "lat": 45.52778,
+  "lon": 13.57056,
+  "tz": "Europe/Ljubljana"
+ },
+ "kwadukuza": {
+  "label": "Kwadukuza",
+  "country": "South Africa",
+  "lat": -29.32816,
+  "lon": 31.28954,
+  "tz": "Africa/Johannesburg"
+ },
+ "ko-samui": {
+  "label": "Ko Samui",
+  "country": "Thailand",
+  "lat": 9.53567,
+  "lon": 99.93567,
+  "tz": "Asia/Bangkok"
+ },
+ "nevsehir": {
+  "label": "Nevsehir",
+  "country": "Turkey",
+  "lat": 38.625,
+  "lon": 34.71222,
+  "tz": "Europe/Istanbul"
+ },
+ "nilufer": {
+  "label": "Nilufer",
+  "country": "Turkey",
+  "lat": 40.21401,
+  "lon": 28.91567,
+  "tz": "Europe/Istanbul"
+ },
+ "dover": {
+  "label": "Dover",
+  "country": "United Kingdom",
+  "lat": 39.15817,
+  "lon": -75.52437,
+  "tz": "America/New_York"
+ },
+ "hawes": {
+  "label": "Hawes",
+  "country": "United Kingdom",
+  "lat": 54.30387,
+  "lon": -2.19605,
+  "tz": "Europe/London"
+ },
+ "hereford": {
+  "label": "Hereford",
+  "country": "United Kingdom",
+  "lat": 52.05684,
+  "lon": -2.71482,
+  "tz": "Europe/London"
+ },
+ "st-ives": {
+  "label": "St Ives",
+  "country": "United Kingdom",
+  "lat": 50.20861,
+  "lon": -5.4875,
+  "tz": "Europe/London"
+ },
+ "newport": {
+  "label": "Newport",
+  "country": "United Kingdom",
+  "lat": 51.58774,
+  "lon": -2.99835,
+  "tz": "Europe/London"
+ },
+ "santa-barbara": {
+  "label": "Santa Barbara",
+  "country": "United States",
+  "lat": 34.42083,
+  "lon": -119.69819,
+  "tz": "America/Los_Angeles"
+ },
+ "miami": {
+  "label": "Miami",
+  "country": "United States",
+  "lat": 25.77427,
+  "lon": -80.19366,
+  "tz": "America/New_York"
+ },
+ "st-james-city": {
+  "label": "St James City",
+  "country": "United States",
+  "lat": null,
+  "lon": null,
+  "tz": "UTC"
+ },
+ "las-vegas": {
+  "label": "Las Vegas",
+  "country": "United States",
+  "lat": 36.17497,
+  "lon": -115.13722,
+  "tz": "America/Los_Angeles"
+ },
+ "margate": {
+  "label": "Margate",
+  "country": "United States",
+  "lat": 39.32789,
+  "lon": -74.50349,
+  "tz": "America/New_York"
+ },
+ "ocean-city": {
+  "label": "Ocean City",
+  "country": "United States",
+  "lat": 39.27762,
+  "lon": -74.5746,
+  "tz": "America/New_York"
+ },
+ "new-york": {
+  "label": "New York",
+  "country": "United States",
+  "lat": 40.71427,
+  "lon": -74.00597,
+  "tz": "America/New_York"
+ },
+ "east-greenwich": {
+  "label": "East Greenwich",
+  "country": "United States",
+  "lat": 41.66038,
+  "lon": -71.45589,
+  "tz": "America/New_York"
+ },
+ "gatlinburg": {
+  "label": "Gatlinburg",
+  "country": "United States",
+  "lat": 35.71453,
+  "lon": -83.51189,
+  "tz": "America/New_York"
+ },
+ "pigeon-forge": {
+  "label": "Pigeon Forge",
+  "country": "United States",
+  "lat": 35.78842,
+  "lon": -83.55433,
+  "tz": "America/New_York"
+ },
+ "gun-barrel-city": {
+  "label": "Gun Barrel City",
+  "country": "United States",
+  "lat": 32.33459,
+  "lon": -96.15136,
+  "tz": "America/Chicago"
+ },
+ "christiansted": {
+  "label": "Christiansted",
+  "country": "US Virgin Islands",
+  "lat": 17.74681,
+  "lon": -64.70557,
+  "tz": "America/St_Thomas"
+ },
+ "water-island": {
+  "label": "Water Island",
+  "country": "US Virgin Islands",
+  "lat": 40.67565,
+  "lon": -73.02928,
+  "tz": "America/New_York"
+ },
+ "mafuta": {
+  "label": "Mafuta",
+  "country": "Zambia",
+  "lat": -5.25,
+  "lon": 25.25,
+  "tz": "Africa/Lubumbashi"
+ },
+ "michamvi": {
+  "label": "Michamvi",
+  "country": "Zanzibar",
+  "lat": -6.15,
+  "lon": 39.5,
+  "tz": "Africa/Dar_es_Salaam"
+ },
+ "antalyaturkey": {
+  "label": "Antalya",
+  "country": "TR",
+  "lat": 36.897,
+  "lon": 30.713,
+  "tz": "Europe/Istanbul"
+ },
+ "paris": {
+  "label": "Paris",
+  "country": "FR",
+  "lat": 48.857,
+  "lon": 2.352,
+  "tz": "Europe/Paris"
+ },
+ "london": {
+  "label": "London",
+  "country": "GB",
+  "lat": 51.507,
+  "lon": -0.128,
+  "tz": "Europe/London"
+ },
+ "rome": {
+  "label": "Rome",
+  "country": "IT",
+  "lat": 41.893,
+  "lon": 12.483,
+  "tz": "Europe/Rome"
+ },
+ "venice": {
+  "label": "Venice",
+  "country": "IT",
+  "lat": 45.44,
+  "lon": 12.316,
+  "tz": "Europe/Rome"
+ },
+ "barcelona": {
+  "label": "Barcelona",
+  "country": "ES",
+  "lat": 41.383,
+  "lon": 2.177,
+  "tz": "Europe/Madrid"
+ },
+ "amsterdam": {
+  "label": "Amsterdam",
+  "country": "NL",
+  "lat": 52.373,
+  "lon": 4.892,
+  "tz": "Europe/Amsterdam"
+ },
+ "vienna": {
+  "label": "Vienna",
+  "country": "AT",
+  "lat": 48.208,
+  "lon": 16.373,
+  "tz": "Europe/Vienna"
+ },
+ "newyork": {
+  "label": "New York",
+  "country": "US",
+  "lat": 40.713,
+  "lon": -74.006,
+  "tz": "America/New_York"
+ },
+ "losangeles": {
+  "label": "Los Angeles",
+  "country": "US",
+  "lat": 34.052,
+  "lon": -118.244,
+  "tz": "America/Los_Angeles"
+ },
+ "tokyo": {
+  "label": "Tokyo",
+  "country": "JP",
+  "lat": 35.69,
+  "lon": 139.692,
+  "tz": "Asia/Tokyo"
+ },
+ "kyoto": {
+  "label": "Kyoto",
+  "country": "JP",
+  "lat": 35.011,
+  "lon": 135.768,
+  "tz": "Asia/Tokyo"
+ },
+ "seoul": {
+  "label": "Seoul",
+  "country": "KR",
+  "lat": 37.566,
+  "lon": 126.978,
+  "tz": "Asia/Seoul"
+ },
+ "hongkong": {
+  "label": "Hong Kong",
+  "country": "HK",
+  "lat": 22.319,
+  "lon": 114.169,
+  "tz": "Asia/Hong_Kong"
+ },
+ "dubai": {
+  "label": "Dubai",
+  "country": "AE",
+  "lat": 25.205,
+  "lon": 55.271,
+  "tz": "Asia/Dubai"
+ },
+ "riodejaneiro": {
+  "label": "Rio de Janeiro",
+  "country": "BR",
+  "lat": -22.907,
+  "lon": -43.173,
+  "tz": "America/Sao_Paulo"
+ },
+ "lisbon": {
+  "label": "Lisbon",
+  "country": "PT",
+  "lat": 38.717,
+  "lon": -9.139,
+  "tz": "Europe/Lisbon"
+ },
+ "athens": {
+  "label": "Athens",
+  "country": "GR",
+  "lat": 37.984,
+  "lon": 23.728,
+  "tz": "Europe/Athens"
+ },
+ "zurich": {
+  "label": "Zurich",
+  "country": "CH",
+  "lat": 47.377,
+  "lon": 8.541,
+  "tz": "Europe/Zurich"
+ },
+ "cairo": {
+  "label": "Cairo",
+  "country": "EG",
+  "lat": 30.044,
+  "lon": 31.236,
+  "tz": "Africa/Cairo"
+ },
+ "shanghai": {
+  "label": "Shanghai",
+  "country": "CN",
+  "lat": 31.23,
+  "lon": 121.474,
+  "tz": "Asia/Shanghai"
+ },
+ "singapore": {
+  "label": "Singapore",
+  "country": "SG",
+  "lat": 1.352,
+  "lon": 103.82,
+  "tz": "Asia/Singapore"
+ },
+ "berlin": {
+  "label": "Berlin",
+  "country": "DE",
+  "lat": 52.52,
+  "lon": 13.405,
+  "tz": "Europe/Berlin"
+ },
+ "tokyoshinjuku": {
+  "label": "Shinjuku",
+  "country": "JP",
+  "lat": 35.69,
+  "lon": 139.7,
+  "tz": "Asia/Tokyo"
+ },
+ "osaka": {
+  "label": "Osaka",
+  "country": "JP",
+  "lat": 34.694,
+  "lon": 135.502,
+  "tz": "Asia/Tokyo"
+ },
+ "kyotocity": {
+  "label": "Kyoto",
+  "country": "JP",
+  "lat": 35.011,
+  "lon": 135.768,
+  "tz": "Asia/Tokyo"
+ },
+ "vancouver": {
+  "label": "Vancouver",
+  "country": "CA",
+  "lat": 49.283,
+  "lon": -123.121,
+  "tz": "America/Vancouver"
+ },
+ "chicago": {
+  "label": "Chicago",
+  "country": "US",
+  "lat": 41.878,
+  "lon": -87.63,
+  "tz": "America/Chicago"
+ },
+ "lasvegas": {
+  "label": "Las Vegas",
+  "country": "US",
+  "lat": 36.17,
+  "lon": -115.14,
+  "tz": "America/Los_Angeles"
+ },
+ "sanfrancisco": {
+  "label": "San Francisco",
+  "country": "US",
+  "lat": 37.775,
+  "lon": -122.419,
+  "tz": "America/Los_Angeles"
+ },
+ "honolulu": {
+  "label": "Honolulu",
+  "country": "US",
+  "lat": 21.307,
+  "lon": -157.858,
+  "tz": "Pacific/Honolulu"
+ },
+ "mexicocity": {
+  "label": "Mexico City",
+  "country": "MX",
+  "lat": 19.433,
+  "lon": -99.133,
+  "tz": "America/Mexico_City"
+ },
+ "buenosaires": {
+  "label": "Buenos Aires",
+  "country": "AR",
+  "lat": -34.604,
+  "lon": -58.382,
+  "tz": "America/Argentina/Buenos_Aires"
+ },
+ "saopaulo": {
+  "label": "Sao Paulo",
+  "country": "BR",
+  "lat": -23.551,
+  "lon": -46.633,
+  "tz": "America/Sao_Paulo"
+ },
+ "dublin": {
+  "label": "Dublin",
+  "country": "IE",
+  "lat": 53.35,
+  "lon": -6.26,
+  "tz": "Europe/Dublin"
+ },
+ "edinburgh": {
+  "label": "Edinburgh",
+  "country": "GB",
+  "lat": 55.953,
+  "lon": -3.189,
+  "tz": "Europe/London"
+ },
+ "manchester": {
+  "label": "Manchester",
+  "country": "GB",
+  "lat": 53.481,
+  "lon": -2.242,
+  "tz": "Europe/London"
+ },
+ "brussels": {
+  "label": "Brussels",
+  "country": "BE",
+  "lat": 50.847,
+  "lon": 4.352,
+  "tz": "Europe/Brussels"
+ },
+ "copenhagen": {
+  "label": "Copenhagen",
+  "country": "DK",
+  "lat": 55.677,
+  "lon": 12.568,
+  "tz": "Europe/Copenhagen"
+ },
+ "stockholm": {
+  "label": "Stockholm",
+  "country": "SE",
+  "lat": 59.329,
+  "lon": 18.069,
+  "tz": "Europe/Stockholm"
+ },
+ "oslo": {
+  "label": "Oslo",
+  "country": "NO",
+  "lat": 59.913,
+  "lon": 10.752,
+  "tz": "Europe/Oslo"
+ },
+ "warsaw": {
+  "label": "Warsaw",
+  "country": "PL",
+  "lat": 52.23,
+  "lon": 21.012,
+  "tz": "Europe/Warsaw"
+ },
+ "budapest": {
+  "label": "Budapest",
+  "country": "HU",
+  "lat": 47.498,
+  "lon": 19.04,
+  "tz": "Europe/Budapest"
+ },
+ "pragueold": {
+  "label": "Prague",
+  "country": "CZ",
+  "lat": 50.087,
+  "lon": 14.421,
+  "tz": "Europe/Prague"
+ },
+ "munich": {
+  "label": "Munich",
+  "country": "DE",
+  "lat": 48.137,
+  "lon": 11.575,
+  "tz": "Europe/Berlin"
+ },
+ "frankfurt": {
+  "label": "Frankfurt",
+  "country": "DE",
+  "lat": 50.11,
+  "lon": 8.682,
+  "tz": "Europe/Berlin"
+ },
+ "hamburg": {
+  "label": "Hamburg",
+  "country": "DE",
+  "lat": 53.551,
+  "lon": 9.993,
+  "tz": "Europe/Berlin"
+ },
+ "geneva": {
+  "label": "Geneva",
+  "country": "CH",
+  "lat": 46.204,
+  "lon": 6.143,
+  "tz": "Europe/Zurich"
+ },
+ "milan": {
+  "label": "Milan",
+  "country": "IT",
+  "lat": 45.464,
+  "lon": 9.19,
+  "tz": "Europe/Rome"
+ },
+ "naples": {
+  "label": "Naples",
+  "country": "IT",
+  "lat": 40.852,
+  "lon": 14.268,
+  "tz": "Europe/Rome"
+ },
+ "florence": {
+  "label": "Florence",
+  "country": "IT",
+  "lat": 43.77,
+  "lon": 11.256,
+  "tz": "Europe/Rome"
+ },
+ "valencia": {
+  "label": "Valencia",
+  "country": "ES",
+  "lat": 39.47,
+  "lon": -0.376,
+  "tz": "Europe/Madrid"
+ },
+ "seville": {
+  "label": "Seville",
+  "country": "ES",
+  "lat": 37.389,
+  "lon": -5.984,
+  "tz": "Europe/Madrid"
+ },
+ "porto": {
+  "label": "Porto",
+  "country": "PT",
+  "lat": 41.15,
+  "lon": -8.61,
+  "tz": "Europe/Lisbon"
+ },
+ "brussels2": {
+  "label": "Antwerp",
+  "country": "BE",
+  "lat": 51.221,
+  "lon": 4.4,
+  "tz": "Europe/Brussels"
+ },
+ "telaviv": {
+  "label": "Tel Aviv",
+  "country": "IL",
+  "lat": 32.085,
+  "lon": 34.781,
+  "tz": "Asia/Jerusalem"
+ },
+ "istanbulbosphorus": {
+  "label": "Istanbul Bosphorus",
+  "country": "TR",
+  "lat": 41.085,
+  "lon": 29.055,
+  "tz": "Europe/Istanbul"
+ },
+ "capetown": {
+  "label": "Cape Town",
+  "country": "ZA",
+  "lat": -33.925,
+  "lon": 18.424,
+  "tz": "Africa/Johannesburg"
+ },
+ "marrakech": {
+  "label": "Marrakech",
+  "country": "MA",
+  "lat": 31.63,
+  "lon": -7.981,
+  "tz": "Africa/Casablanca"
+ },
+ "nairobi": {
+  "label": "Nairobi",
+  "country": "KE",
+  "lat": -1.286,
+  "lon": 36.817,
+  "tz": "Africa/Nairobi"
+ },
+ "bangkok": {
+  "label": "Bangkok",
+  "country": "TH",
+  "lat": 13.756,
+  "lon": 100.502,
+  "tz": "Asia/Bangkok"
+ },
+ "mumbai": {
+  "label": "Mumbai",
+  "country": "IN",
+  "lat": 19.076,
+  "lon": 72.877,
+  "tz": "Asia/Kolkata"
+ },
+ "dohacity": {
+  "label": "Doha",
+  "country": "QA",
+  "lat": 25.286,
+  "lon": 51.531,
+  "tz": "Asia/Qatar"
+ },
+ "kualalumpur": {
+  "label": "Kuala Lumpur",
+  "country": "MY",
+  "lat": 3.139,
+  "lon": 101.687,
+  "tz": "Asia/Kuala_Lumpur"
+ },
+ "auckland": {
+  "label": "Auckland",
+  "country": "NZ",
+  "lat": -36.849,
+  "lon": 174.763,
+  "tz": "Pacific/Auckland"
+ }
+}

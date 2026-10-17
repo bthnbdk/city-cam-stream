@@ -7,16 +7,18 @@ html,body{margin:0;height:100%;background:#05080b;color:var(--fg);
 #tiles.grid{grid-template-columns:1fr 1fr;grid-template-rows:1fr 1fr}
 #tiles.float{display:block}
 .tile{position:relative;overflow:hidden;background:#0a0f14}
+.tile iframe{width:100%;height:100%;border:0;display:block;background:#0a0f14}
 .tile video,.tile img{width:100%;height:100%;object-fit:cover;display:block;background:#0a0f14}
 #tiles.float .tile{position:absolute;inset:0}
 #tiles.float .tile.pip{inset:auto 2% 8% auto;width:26%;height:26%;
   border:2px solid rgba(255,255,255,.55);border-radius:12px;box-shadow:0 6px 24px rgba(0,0,0,.6)}
-#tiles.float .tile.pip video,#tiles.float .tile.pip img{border-radius:10px}
+#tiles.float .tile.pip video,#tiles.float .tile.pip img,#tiles.float .tile.pip iframe{border-radius:10px}
 .caption{position:absolute;left:10px;top:8px;padding:3px 9px;border-radius:8px;
   background:rgba(0,0,0,.55);font-size:13px;color:#e6eef7;max-width:80%;white-space:nowrap;
   overflow:hidden;text-overflow:ellipsis}
 .badge2{position:absolute;right:10px;top:8px;padding:3px 9px;border-radius:9px;font-size:13px;font-weight:700;color:#06121a}
 .badge2.A{background:var(--A)}.badge2.B{background:var(--B)}.badge2.C{background:var(--C);color:#fff}
+#standby[hidden]{display:none!important}
 #standby{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
   justify-content:center;gap:14px;background:#080c11;text-align:center;padding:24px}
 #standby h1{font-size:clamp(28px,6vw,64px);margin:0;font-weight:800;letter-spacing:.5px}

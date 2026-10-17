@@ -1,6 +1,6 @@
 {
- "kamera": 3804,
- "sehir": 7,
+ "kamera": 4034,
+ "sehir": 69,
  "kaynaklar": [
   {
    "src": "digitraffic",
@@ -13,20 +13,31 @@
    "a": 890
   },
   {
+   "src": "skyline_live",
+   "n": 853,
+   "a": 0
+  },
+  {
    "src": "ibb_tkm",
    "n": 635,
+   "a": 0
+  },
+  {
+   "src": "yt_live",
+   "n": 230,
    "a": 0
   }
  ],
  "tip_dagilimi": {
-  "diger": 3488,
-  "trafik": 113,
-  "skyline": 74,
-  "kopru": 50,
-  "tren": 23,
-  "sahil": 23,
-  "hava": 17,
-  "meydan": 16
+  "diger": 4162,
+  "canli_yayin": 230,
+  "sahil": 130,
+  "trafik": 117,
+  "skyline": 107,
+  "kopru": 55,
+  "meydan": 32,
+  "tren": 27,
+  "hava": 27
  },
- "eksik_uptime_ornegi": 0
+ "eksik_uptime_ornegi": 1
 }

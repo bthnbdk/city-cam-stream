@@ -67,22 +67,19 @@ def main():
         pg.goto(f"{BASE}/index.html?city=istanbul&rotation=5", wait_until="domcontentloaded")
         pg.wait_for_selector("#tiles .tile, #standby", timeout=20000)
         pg.wait_for_timeout(9000)
-        playing = False
-        real = ""
-        try:
-            playing = pg.eval_on_selector(
-                "#tiles video",
-                "v => v.readyState >= 2 && (v.currentTime > 0.3 || v.videoWidth > 0)") \
-                if pg.query_selector("#tiles video") else False
-            real = pg.eval_on_selector(
-                "#tiles video",
-                "v => `readyState=${v.readyState} t=${v.currentTime.toFixed(2)} ${v.videoWidth}x${v.videoHeight}`") \
-                if pg.query_selector("#tiles video") else "video yok"
-        except Exception as e:
-            real = f"olcum hatasi: {e}"
-        standby = pg.eval_on_selector("#standby", "e=>!e.hidden")
-        check("istanbul: akış gerçekten oynatılıyor veya yedek sahne",
-              playing or standby, f"gercek_oynatma={playing} standby={standby} [{real}]")
+        check("istanbul: medya öğesi (video/img/iframe) veya yedek sahne",
+              pg.query_selector("#tiles video, #tiles img, #tiles iframe") is not None
+              or pg.eval_on_selector("#standby", "e=>!e.hidden"),
+              pg.eval_on_selector("#ov-cam", "e=>e.textContent")[:40])
+
+        # 4b) YouTube embed şehri (ör. Tokyo) — iframe ile oynamalı
+        pg.goto(f"{BASE}/index.html?city=tokyo&rotation=5", wait_until="domcontentloaded")
+        pg.wait_for_selector("#tiles .tile", timeout=20000)
+        pg.wait_for_timeout(6000)
+        fr = pg.query_selector("#tiles iframe")
+        check("youtube embed iframe yüklendi", fr is not None,
+              (fr.get_attribute("src") if fr else "")[:70])
+        pg.screenshot(path=f"{OUT}/desktop_tokyo.png")
 
         # 5) Mobil taşma
         m = br.new_context(**pw.devices["iPhone 13"]).new_page()

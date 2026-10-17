@@ -73,6 +73,26 @@
     bd.textContent = cam.lic; bd.className = 'badge2 ' + cam.lic;
     bd.style.display = cfg.badge ? '' : 'none';
 
+    if (cam.kind === 'youtube') {
+      const f = document.createElement('iframe');
+      f.allow = 'autoplay; encrypted-media; picture-in-picture';
+      f.setAttribute('frameborder', '0');
+      f.setAttribute('allowfullscreen', '');
+      // Ses kapalıysa YouTube embed'i sessiz başlatılır (otomatik oynatma politikası).
+      let src = cfg.sound ? cam.url.replace('mute=1', 'mute=0') : cam.url;
+      if (!src.includes('enablejsapi')) src += '&enablejsapi=1&origin=' + encodeURIComponent(location.origin);
+      f.src = src;
+      // Bazı tarayıcılar embed'i duraklatılmış başlatır -> IFrame API ile oynatmayı zorla.
+      f.onload = () => {
+        const kick = (fn) => { try { f.contentWindow.postMessage(JSON.stringify({ event: 'command', func: fn, args: [] }), '*'); } catch (e) {} };
+        [800, 2000, 4000].forEach(t => setTimeout(() => {
+          kick(cfg.sound ? 'unMute' : 'mute'); kick('playVideo');
+        }, t));
+      };
+      tile.appendChild(f);
+      tile._refresh = null;
+      return;
+    }
     if (cam.kind === 'snapshot') {
       const img = document.createElement('img');
       img.alt = cam.name;

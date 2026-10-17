@@ -89,7 +89,9 @@ def now():
 
 
 def conn():
-    c = sqlite3.connect(DB)
+    # WAL + uzun busy timeout: toplayıcılar paralel çalışırken kilit hatası olmasın
+    c = sqlite3.connect(DB, timeout=60)
+    c.execute("PRAGMA journal_mode=WAL")
     c.executescript(SCHEMA)
     c.row_factory = sqlite3.Row
     return c
@@ -298,6 +300,8 @@ def cmd_probe(args):
     p = []
     if args.city:
         q += " WHERE city=?"; p.append(args.city)
+    if getattr(args, "source", None):
+        q += (" AND " if "WHERE" in q else " WHERE ") + "source_key=?"; p.append(args.source)
     q += " ORDER BY (kind='hls') DESC, id LIMIT ?"
     p.append(args.limit)
     rows = c.execute(q, p).fetchall()
@@ -443,7 +447,8 @@ def main():
     ap = argparse.ArgumentParser()
     sub = ap.add_subparsers(dest="cmd", required=True)
     d = sub.add_parser("discover"); d.add_argument("--city", default="all"); d.set_defaults(f=cmd_discover)
-    p = sub.add_parser("probe"); p.add_argument("--limit", type=int, default=40); p.add_argument("--city"); p.set_defaults(f=cmd_probe)
+    p = sub.add_parser("probe"); p.add_argument("--limit", type=int, default=40)
+    p.add_argument("--city"); p.add_argument("--source"); p.set_defaults(f=cmd_probe)
     s = sub.add_parser("score"); s.set_defaults(f=cmd_score)
     u = sub.add_parser("uptime"); u.add_argument("--limit", type=int, default=150); u.set_defaults(f=cmd_uptime)
     st = sub.add_parser("stats"); st.set_defaults(f=cmd_stats)
