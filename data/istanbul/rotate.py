@@ -8,7 +8,7 @@ import argparse, json, ssl, subprocess, time, urllib.request
 from pathlib import Path
 
 PLAYLIST = [["CAM1_S._YOLU_ATAKÖY_1", "https://hls.ibb.gov.tr/tkm1/hls/8.stream/playlist.m3u8", "full"], ["CAM2_ATATÜRK_HAVALİMANI", "https://hls.ibb.gov.tr/tkm1/hls/13.stream/playlist.m3u8", "full"], ["CAM3_BAKIRKÖY_İSTANBUL_", "https://hls.ibb.gov.tr/tkm1/hls/27.stream/playlist.m3u8", "full"], ["CAM4_AKOM", "https://hls.ibb.gov.tr/tkm4/hls/2.stream/playlist.m3u8", "full"]]      # [(kamera_adı, akış_url, sahne_tipi)]  sahne_tipi: full|pip
-ROTATE_SEC = 5           # her kamerada kalma süresi (VARSAYILAN 5 sn)
+ROTATE_SEC = 30           # her kamerada kalma süresi (VARSAYILAN 30 sn)
 FADE_MS = 800                # yumuşak geçiş
 HEALTH_EVERY = 45            # saniye
 STANDBY = "STANDBY"

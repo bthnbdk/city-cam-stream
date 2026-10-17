@@ -28,7 +28,7 @@ def main():
         pg.on("pageerror", lambda e: errs.append(str(e)))
 
         # 1) Londra (mp4 akışları) + panel açık
-        pg.goto(f"{BASE}/index.html?city=london&rotation=5&panel=1", wait_until="domcontentloaded")
+        pg.goto(f"{BASE}/index.html?city=london&panel=1", wait_until="domcontentloaded")  # rotasyon VERİLMEZ -> varsayılan ölçülür
         pg.wait_for_selector("#tiles .tile", timeout=20000)
         check("tiles render (london)", True)
         pg.wait_for_timeout(6000)
@@ -39,7 +39,10 @@ def main():
         badge = pg.inner_text("#ov-badge")
         check("lisans rozeti = A (london)", badge.strip() == "A", badge)
         rot = pg.input_value("#c-rot")
-        check("varsayılan rotasyon 5 sn", rot == "5", rot)
+        check("varsayılan rotasyon 30 sn", rot == "30", rot)
+        # ön-yükleme: arkada hazır tutulan akışlar
+        warm = pg.evaluate("() => document.querySelector('#preload').children.length")
+        check("ön-yükleme (preload) arkada akış tutuyor", warm >= 1, f"hazır öğe={warm}")
         cnt = pg.inner_text("#ov-count")
         check("sayaç n/n biçiminde", "/" in cnt, cnt)
         cap1 = pg.inner_text("#tiles .caption")
@@ -51,7 +54,7 @@ def main():
         pg.screenshot(path=f"{OUT}/desktop_london.png")
 
         # 2) URL parametreleri etkili mi (rotation=2, overlay=0, badge=0)
-        pg.goto(f"{BASE}/index.html?city=london&rotation=2&overlay=0&badge=0", wait_until="domcontentloaded")
+        pg.goto(f"{BASE}/index.html?city=london&rotation=2&overlay=0&badge=0&preload=1", wait_until="domcontentloaded")
         pg.wait_for_selector("#tiles .tile", timeout=20000)
         pg.wait_for_timeout(2500)
         check("overlay=0 barı gizler", pg.get_attribute("#bar", "hidden") is not None)

@@ -11,6 +11,7 @@
 <body>
 <div id="stage">
   <div id="tiles"></div>
+  <div id="preload" aria-hidden="true"></div>
   <div id="standby" hidden>
     <span class="dot"></span>
     <h1 id="sb-city">City</h1>
@@ -32,7 +33,7 @@
 <div id="panel" hidden>
   <h2>Controls <span class="hint">(h)</span></h2>
   <label>City <select id="c-city"></select></label>
-  <label>Rotation (sec) <input id="c-rot" type="number" min="1" max="600" step="1" value="5"></label>
+  <label>Rotation (sec) <input id="c-rot" type="number" min="1" max="600" step="1" value="30"></label>
   <label>Layout <select id="c-mode">
     <option value="full">Full frame</option>
     <option value="pip">PiP (main + corner)</option>
@@ -43,12 +44,14 @@
     <option value="a">Class A only (open licence)</option>
   </select></label>
   <label>Max cameras <input id="c-lim" type="number" min="1" max="400" value="40"></label>
+  <label>Preload ahead <input id="c-pre" type="number" min="0" max="6" value="2"></label>
   <label class="chk"><input id="c-overlay" type="checkbox" checked> Overlay bar</label>
   <label class="chk"><input id="c-badge" type="checkbox" checked> Licence badge</label>
   <label class="chk"><input id="c-sound" type="checkbox"> Sound</label>
-  <p class="help">URL parameters: <code>?city=istanbul&amp;rotation=5&amp;mode=full&amp;pool=all&amp;lim=40&amp;overlay=1&amp;badge=1&amp;sound=0</code><br>
-  Use <code>cam=12,13</code> to force specific camera ids, <code>statik=1</code> to freeze rotation,
-  <code>panel=1</code> to open this panel.<br>
+  <p class="help">URL parameters: <code>?city=istanbul&amp;rotation=30&amp;mode=full&amp;pool=all&amp;lim=40&amp;preload=2&amp;overlay=1&amp;badge=1&amp;sound=0</code><br>
+  Rotation defaults to <b>30 s</b>; <code>preload=N</code> keeps the next N cameras already playing off-screen
+  so no black frame appears between switches. <code>cam=12,13</code> forces specific ids,
+  <code>statik=1</code> freezes rotation, <code>panel=1</code> opens this panel.<br>
   For OBS, add this URL as a <b>Browser Source</b> (use <code>overlay=0</code> for a clean feed).<br>
   Licensing classes: <b>A</b> open licence / permission · <b>B</b> permission pending ·
   <b>C</b> no permission — do not broadcast. <code>pool=a</code> hides everything but class A.</p>

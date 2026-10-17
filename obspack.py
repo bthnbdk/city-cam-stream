@@ -184,7 +184,7 @@ import argparse, json, ssl, subprocess, time, urllib.request
 from pathlib import Path
 
 PLAYLIST = {playlist!r}      # [(kamera_adı, akış_url, sahne_tipi)]  sahne_tipi: full|pip
-ROTATE_SEC = {rot}           # her kamerada kalma süresi (VARSAYILAN 5 sn)
+ROTATE_SEC = {rot}           # her kamerada kalma süresi (VARSAYILAN 30 sn)
 FADE_MS = 800                # yumuşak geçiş
 HEALTH_EVERY = 45            # saniye
 STANDBY = "STANDBY"
@@ -344,7 +344,7 @@ def build(city, n_cams):
     (out / f"obs_scenes_{city}.json").write_text(json.dumps(coll, indent=2, ensure_ascii=False))
     (out / "rotate.py").write_text(ROTATE_TEMPLATE.replace("{city}", city)
                                    .replace("{playlist!r}", json.dumps(playlist, ensure_ascii=False))
-                                   .replace("{rot}", "5"))
+                                   .replace("{rot}", "30"))
     (out / "README.txt").write_text(
         f"""OBS ŞABLONU — {meta['label']}
 1) OBS > Sahne Koleksiyonu > İçe Aktar > obs_scenes_{city}.json

@@ -18,6 +18,8 @@ html,body{margin:0;height:100%;background:#05080b;color:var(--fg);
   overflow:hidden;text-overflow:ellipsis}
 .badge2{position:absolute;right:10px;top:8px;padding:3px 9px;border-radius:9px;font-size:13px;font-weight:700;color:#06121a}
 .badge2.A{background:var(--A)}.badge2.B{background:var(--B)}.badge2.C{background:var(--C);color:#fff}
+#preload{position:absolute;right:0;bottom:0;width:2px;height:2px;overflow:hidden;opacity:.01;pointer-events:none;z-index:-1}
+#preload video,#preload iframe,#preload img{width:2px;height:2px}
 #standby[hidden]{display:none!important}
 #standby{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;
   justify-content:center;gap:14px;background:#080c11;text-align:center;padding:24px}
